@@ -45,24 +45,22 @@
       </div>
 
       <div #chartTarget></div>
-      <app-performance-list (selectedItem)="itemSelected($event)" (itemChecked)="checkedItem($event)"></app-performance-list>
-
-      <mat-accordion>
-        <mat-expansion-panel [expanded]="true">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Compare with your target allocation
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <div *ngFor="let item of items; let i = index">
-            <app-performance-selected-item 
-            [itemSelected] = item
-            [index]= i>
-            </app-performance-selected-item>
-          </div>
-        </mat-expansion-panel>
-      </mat-accordion>
-
+      <app-performance-list (selectedItem)="itemSelected($event)" (itemChecked)="checkedItem($event)"></app-performance-list>       
+        <mat-accordion>
+            <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                Compare with your target allocation
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="details-tiles-container">
+                <div *ngFor="let item of items" class="details-tiles">
+                    <app-performance-selected-item [itemSelected]=item>
+                    </app-performance-selected-item>
+                </div>
+            </div>
+            </mat-expansion-panel>
+        </mat-accordion>
     </mat-card-content>
   </mat-card>
 </div>

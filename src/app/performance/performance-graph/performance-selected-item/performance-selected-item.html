@@ -3,9 +3,9 @@
     <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"
       [options]="chartOptions" [legend]=false (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
     </canvas>
-    <p>{{item.title}} Allocation</p>
-    <p>{{item.equity}}.0% <strong style="color: red"> Equity </strong> </p>
-    <p>{{item.fixedIncome}}.0% <strong style="color: green"> Fixed Income </strong></p>
-    <p *ngIf = "item.cash != 0">{{item.cash}}.0% <strong style="color: blue"> Cash </strong></p>
+    <p class="tile-heading">{{item.title}} Allocation</p>
+    <p class="tile-equity">{{item.equity}}.0% <strong style="color: #f16125">Equity</strong> </p>
+    <p class="tile-income">{{item.fixedIncome}}.0% <strong style="color: #2774d0">Fixed Income</strong></p>
+    <p class="tile-cash">{{item.cash}}.0% <strong style="color: #1ca054">Cash</strong></p>
   </div>
 </div>

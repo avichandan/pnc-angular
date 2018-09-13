@@ -2,42 +2,42 @@ import { PerformanceItem } from './performance-item.interface';
 
 export const performanceItems: PerformanceItem[] = [
     {
-        title: 'PRESERVATION',
+        title: 'Preservation',
         equity: 21,
         target: false,
         fixedIncome: 33,
         cash: 46
     },
     {
-        title: 'CONSERVATIVE',
+        title: 'Conservative',
         equity: 27,
         target: true,
         fixedIncome: 33,
         cash: 40
     },
     {
-        title: 'MODERATE',
+        title: 'Moderate',
         equity: 35,
         target: false,
         fixedIncome: 33,
         cash: 32
     },
     {
-        title: 'BALANCED',
+        title: 'Balanced',
         equity: 43,
         target: false,
         fixedIncome: 33,
         cash: 24
     },
     {
-        title: 'GROWTH',
+        title: 'Growth',
         equity: 45,
         target: false,
         fixedIncome: 34,
         cash: 21
     },
     {
-        title: 'ADDRESSIVE',
+        title: 'Addressive',
         equity: 32,
         target: false,
         fixedIncome: 24,

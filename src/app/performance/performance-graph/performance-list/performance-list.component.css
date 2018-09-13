@@ -10,6 +10,7 @@
     display: inline-block;
     margin: 4px;
     width: 16%;
+    vertical-align: top;
 }
 
 .benchmarks-container h4 mat-icon {
@@ -19,8 +20,21 @@
 
 .benchmarks-wrapper .mat-card:not([class*=mat-elevation-z]) {
     box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.benchmarks-wrapper .mat-card:not([class*=mat-elevation-z]):hover {
+    background: #b4dfef;
 }
 
 .benchmarks-wrapper {
     margin-top: 55px;
+    min-height: 300px;
+}
+
+.benchmarks-wrapper .mat-card:not([class*=mat-elevation-z]):hover p.benchmark-toggle-btn {
+    display: block;
 }

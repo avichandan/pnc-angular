@@ -1,3 +1,16 @@
-.target-item {
-    background-color: aqua;
+p.tile-heading {
+    font-size: 17px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+p.tile-equity, p.tile-income, p.tile-cash {
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0 0 5px;
+}
+p.tile-equity strong, p.tile-income strong, p.tile-cash strong {
+    margin-left: 5px;
 }

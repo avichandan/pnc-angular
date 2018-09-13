@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <mat-card [ngClass] = "(applyClass)? 'selected-item': '' ">
     <div style="display: block">
         <canvas baseChart
@@ -8,9 +9,15 @@
                     [legend] = false
                     (chartHover)="chartHovered($event)"
                     (chartClick)="chartClicked($event)">
+=======
+<mat-card>
+    <div class="benchmark-tiles-container">
+        <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" [options]="chartOptions" [legend]=false (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+>>>>>>> 519b7e62f7e4c5e00d2d5d9cbd3598b490477a7f
         </canvas>
-        <p>{{ item.title }}</p>
-        <p>
+        <p class="benchmark-name">{{ item.title }}</p>
+        <p class="benchmark-toggle-btn">
+            <span class="benchmark-toggle-name">Demo Text</span>
             <mat-slide-toggle (change)="toggle($event)"></mat-slide-toggle>
         </p>
     </div>
