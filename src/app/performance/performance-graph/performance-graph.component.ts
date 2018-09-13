@@ -42,7 +42,7 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
           series: [{
             name: 'Jane',
             data: [1, 0, 4],
-            dashStyle: 'Dash'
+            // dashStyle: 'Dash'
           }, {
             name: 'John',
             data: [5, 7, 3]
