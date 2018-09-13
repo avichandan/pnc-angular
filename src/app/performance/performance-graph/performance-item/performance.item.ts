@@ -26,8 +26,8 @@ export class PerformanceItemComponent implements OnInit {
             }
         ]
 
-    private options: {
-        responsive: true
+    private options:any = {
+        responsive: true,
         cutoutPercentage: 80
     }
 

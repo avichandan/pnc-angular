@@ -15,8 +15,15 @@ export class PerformanceSelectedItemComponent implements OnInit {
   public doughnutChartData:number[] = [];
     
   public doughnutChartType:string = 'doughnut';
-  public chartOptions: {
-    cutoutPercentage: 10
+  private doughnutChartColors: any[] =
+        [
+            {
+                backgroundColor: ["#f16125", "#2774d0", "#1ca054"]
+            }
+        ]
+  private options:any = {
+    responsive: true,
+    cutoutPercentage: 80
 }
   
 
