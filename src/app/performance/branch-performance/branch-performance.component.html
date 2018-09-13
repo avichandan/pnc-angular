@@ -1,0 +1,7 @@
+<mat-card>
+  <mat-card-content>
+    <h4><strong>{{ branch.branchName}}</strong></h4>
+    <p *ngIf="branch.profit != 0" style="color: green">+{{branch.profit}}.0%</p>
+    <p *ngIf="branch.loss != 0" style="color: red">-{{branch.profit}}.0%</p>
+  </mat-card-content>
+</mat-card>

@@ -14,17 +14,19 @@ import { PerformanceComponent} from './performance/performance.component';
 import { PerformanceGraphComponent } from './performance/performance-graph/performance-graph.component';
 import { PerformancelistComponent } from './performance/performance-graph/performance-list/performance-list.component';
 import { PerformanceItemComponent } from './performance/performance-graph/performance-item/performance.item';
-import { PerformanceSelectedItemComponent } from './performance/performance-graph/performance-selected-item/performance-selected-item'
+import { PerformanceSelectedItemComponent } from './performance/performance-graph/performance-selected-item/performance-selected-item';
+import { BranchPerformanceComponent } from './performance/branch-performance/branch-performance.component';
 @NgModule({
   declarations: [
     HeaderComponent,
+    FooterComponent,
     PerformanceComponent,
     PerformanceGraphComponent,
     PerformancelistComponent,
     PerformanceItemComponent,
     PerformanceSelectedItemComponent,
-    AppComponent,
-    FooterComponent
+    BranchPerformanceComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
