@@ -21,7 +21,6 @@ export class PerformancelistComponent implements OnInit {
      }
 
     selectThisItem(item){
-        console.log("item", item)
         this.selectedItem.emit(item)
     }
 

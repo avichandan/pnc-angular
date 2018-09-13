@@ -2,6 +2,9 @@ import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, ViewEncapsulat
 import { chart } from 'highcharts';
 import * as Highcharts from 'highcharts';
 
+import {performanceItems} from '../../models/performance-item.model'
+import { PerformanceItem } from '../../models/performance-item.interface';
+
 @Component({
     selector: 'app-performance-graph',
     templateUrl: 'performance-graph.component.html',
@@ -14,13 +17,19 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
     @ViewChild('chartTarget') chartTarget: ElementRef;
 
     chart: Highcharts.ChartObject;
-    items: Array<number> = [];
+    items: Array<PerformanceItem> = [];
     item: any;
 
 
     constructor() { }
 
-    ngOnInit() { }
+    ngOnInit() {
+      performanceItems.forEach(item => {
+        if(item.target){
+          this.items.push(item)
+        }
+      })
+     }
 
     ngAfterViewInit() {
 
@@ -65,10 +74,7 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
           this.items.push(this.item)
         }
         else {
-          const itemsdsd = this.items.splice(this.item, 1)
-          console.log("items", this.items);
-          console.log("item", this.item);
-          console.log("removed", itemsdsd)
+          this.items.splice(this.item, 1)
         }
       }
     
