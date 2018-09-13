@@ -110,6 +110,7 @@ p.net-fee::after {
     left: 0;
     background: #2275d3;
     bottom: -18px;
+    z-index: 9;
 }
 
 span.name {

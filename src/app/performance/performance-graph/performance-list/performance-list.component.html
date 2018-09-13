@@ -1,0 +1,10 @@
+<div>
+    <h4>PNC BLENDED BENCHMARKS <mat-icon>info</mat-icon></h4>
+</div>
+<div *ngFor = "let item of items; let i = index" class="show-items">
+    <app-performance-item 
+    [itemPassed] = item
+    [index] = i
+    (selectedItem) = "selectThisItem($event)"
+    (checkedItem) = "checkedItem($event)"></app-performance-item>
+</div>
