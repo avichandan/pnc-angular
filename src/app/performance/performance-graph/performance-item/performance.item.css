@@ -4,6 +4,7 @@
     text-align: center;
     margin: 20px 0 0;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 p.benchmark-toggle-btn {

@@ -17,7 +17,8 @@ import {
     MatIconModule,
     MatTabsModule,
     MatTooltipModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatExpansionModule
 } from '@angular/material';
 
 @NgModule({
@@ -40,7 +41,8 @@ import {
     MatIconModule,
     MatTabsModule,
     MatTooltipModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatExpansionModule
    ],
    exports: [
     MatButtonModule,
@@ -61,7 +63,8 @@ import {
     MatIconModule,
     MatTabsModule,
     MatTooltipModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatExpansionModule
    ]
 })
 
