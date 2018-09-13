@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, ViewEncapsulation } from '@angular/core';
 import { chart } from 'highcharts';
 import * as Highcharts from 'highcharts';
+import * as moment from 'moment';
 
 import {performanceItems} from '../../models/performance-item.model'
 import { PerformanceItem } from '../../models/performance-item.interface';
@@ -20,10 +21,21 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
     @ViewChild('chartTarget') chartTarget: ElementRef;
 
     branches: Branch[] = []
-
+    options = [
+      {value: 1, displayValue: '1 YEAR'},
+      {value: 2, displayValue: '2 YEAR'},
+      {value: 3, displayValue: '3 YEAR'},
+      {value: 4, displayValue: '4 YEAR'},
+      {value: 5, displayValue: '5 YEAR'}
+    ];
+    
+    selectedDefault:object = { value: 1, displayValue: '1 YEAR' }
     chart: Highcharts.ChartObject;
     items: Array<PerformanceItem> = [];
     item: any;
+    startYear: number;
+    endYear: number;
+    xaxisLables: Array<any> = []
 
 
     constructor() { }
@@ -37,14 +49,33 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
 
       this.items.push(targetPerformanceItem);
       this.branches = branches;
+      this.endYear = parseInt(moment().format('YYYY'));
+      this.startYear = this.endYear -1;
+      
+      for(let i = this.startYear; i<=this.endYear; i++){
+        for(let j = 1; j<= 12; j++){
+          var startDate = moment([i, j-1]);
+          var endDate = moment(startDate).endOf('month');
+          const startDateFormatted = moment(startDate['_d']).format('D');
+          const endDateFormatted = moment(endDate['_d']).format('D');
+          const value = startDateFormatted + '/' + endDateFormatted;
+          this.xaxisLables.push(value);
+        }
+      }
+
+      console.log(this.xaxisLables);
+
      }
 
-    ngAfterViewInit() {
+    ngAfterViewInit() { 
 
         const data = ['Orange', 'Apple', 'Mango']
         const options: Highcharts.Options = {
           chart: {
             type: 'line'
+          },
+          credits: {
+            enabled: false
           },
           title: {
             text: 'Fruit Consumption'
@@ -84,6 +115,12 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
         else {
           this.items.splice(this.item, 1)
         }
+      }
+
+      selectionChanged(value){
+        console.log("value", value)
+        this.startYear = this.endYear - value;
+        console.log(this.startYear);
       }
     
       

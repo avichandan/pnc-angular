@@ -11,13 +11,11 @@
         <div class="filter-right-col">
           <div class="year-filter-info">
             <mat-form-field class="year-select">
-              <mat-select placeholder="1 Year">
-                <mat-option>1 Year</mat-option>
-                <mat-option>2 Year</mat-option>
-                <mat-option>3 Year</mat-option>
-                <mat-option>4 Year</mat-option>
-                <mat-option>5 Year</mat-option>
-              </mat-select>
+                <mat-select  [(value)]="selectedDefault.value" (selectionChange) = "selectionChanged($event.value)">
+                    <mat-option *ngFor = "let option of options" [value] = "option.value">
+                      {{ option.displayValue }}
+                    </mat-option>
+                </mat-select>
             </mat-form-field>
 
             <span class="year-filter-info">
