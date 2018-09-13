@@ -11,17 +11,22 @@ import { AppComponent } from './app.component';
 import { HeaderComponent} from './header/header.component'
 import { PerformanceComponent} from './performance/performance.component';
 import { PerformanceGraphComponent } from './performance/performance-graph/performance-graph.component';
+import { PerformancelistComponent } from './performance/performance-graph/performance-list/performance-list.component';
+import { PerformanceItemComponent } from './performance/performance-graph/performance-item/performance.item';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     PerformanceComponent,
     PerformanceGraphComponent,
+    PerformancelistComponent,
+    PerformanceItemComponent,
     AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ChartsModule,
     MaterialModule,
     RouterModule,
     AppRoutingModule

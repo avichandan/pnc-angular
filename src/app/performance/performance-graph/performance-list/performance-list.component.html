@@ -1,0 +1,5 @@
+<div *ngFor = "let item of items; let i = index" class="show-items">
+    <app-performance-item 
+    [itemPassed] = item
+    [index] = i></app-performance-item>
+</div>

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class PerformancelistComponent implements OnInit {
+
+    items = ['1', '2', '3', '4'];
     constructor() { }
 
     ngOnInit() { }
