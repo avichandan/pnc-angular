@@ -1,5 +1,26 @@
+.benchmarks-container h4 {
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
 .show-items.ng-star-inserted {
     display: inline-block;
-    margin: 10px;
-    width: 200px;
+    margin: 4px;
+    width: 16%;
+}
+
+.benchmarks-container h4 mat-icon {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.benchmarks-wrapper .mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.benchmarks-wrapper {
+    margin-top: 55px;
 }
