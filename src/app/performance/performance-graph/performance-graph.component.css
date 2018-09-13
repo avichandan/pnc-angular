@@ -1,3 +1,9 @@
+.main-cart-wrapper {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    max-width: 1500px;
+    margin: 30px auto 0 auto;
+}
+
 mat-card {
     margin: 5px;
 }
@@ -5,4 +11,8 @@ mat-card {
 .performance-div {
     display: inline-block;
     margin: 20px;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
 }

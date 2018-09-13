@@ -1,0 +1,44 @@
+.mat-tab-labels {
+    justify-content: center;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #2275d3;
+    height: 4px;
+}
+
+.mat-tab-label {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #6f6f6f;
+    text-transform: uppercase;
+    opacity: 1 !important;
+}
+
+.mat-tab-label-active {
+    font-weight: 700;
+    color: #000;
+}
+
+.mat-inner-group .mat-tab-label {
+    font-weight: 500;
+}
+
+.mat-inner-group .mat-tab-label-active {
+    background: #f8f9fa;
+}
+
+.mat-inner-group .mat-tab-labels {
+    background: #efefef;
+}
+
+.mat-tab-header,
+.mat-tab-nav-bar {
+    border-bottom: none;
+}
+
+.mat-inner-group .mat-ink-bar {
+    display: none;
+}

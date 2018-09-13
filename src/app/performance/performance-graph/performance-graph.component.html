@@ -1,36 +1,36 @@
-<mat-card>
-  <mat-card-content>
-    <div class="performance-div">
-      <h4>Performance</h4>
-      <p>Net of Fees<mat-icon matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
-      </p>
-      <p>39.1%</p>
-    </div>
-    
-    <div class="performance-div">
-      <h4>
-        <select name="year-select" id="year">
+<div class="main-cart-wrapper">
+    <mat-card>
+        <mat-card-content>
+            <div class="performance-div">
+                <h4>Performance</h4>
+                <p>Net of Fees
+                    <mat-icon matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
+                </p>
+                <p>39.1%</p>
+            </div>
+
+            <div class="performance-div">
+                <h4>
+                    <select name="year-select" id="year">
           <option value="1">1 YEAR</option>
           <option value="2">2 YEAR</option>
           <option value="3">1 YEAR</option>
         </select>
-        <mat-icon matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
-      </h4>
+                    <mat-icon matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
+                </h4>
 
-      <div>
-        <div>
-          <mat-icon matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
-          <h4>AGGREGATE</h4>
-          <p>
-            <mat-slide-toggle></mat-slide-toggle>
-          </p>
-        </div>
-      </div>
-    </div>
+                <div>
+                    <div>
+                        <mat-icon matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
+                        <h4>AGGREGATE</h4>
+                        <p>
+                            <mat-slide-toggle></mat-slide-toggle>
+                        </p>
+                    </div>
+                </div>
 
-    <div #chartTarget>
-    </div>
-    <app-performance-list></app-performance-list>
+            </div>
 
-  </mat-card-content>
-</mat-card>
+        </mat-card-content>
+    </mat-card>
+</div>
