@@ -30,6 +30,7 @@ export class PerformanceItemComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { 
+        console.log(this.item)
         this.doughnutChartData = [
             this.item.equity,
             this.item.fixedIncome,
