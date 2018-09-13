@@ -60,7 +60,6 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
       }
 
       checkedItem(checked){
-        console.log("checked", checked)
         if(checked){
          
           this.items.push(this.item)
