@@ -15,36 +15,40 @@ export class PerformanceItemComponent implements OnInit {
     @Output('checkedItem') itemChecked = new EventEmitter();
     applyClass: boolean = false;
 
-  public doughnutChartLabels:string[] = ['Equity', 'Fixed Cost', 'Cash'];
-  public doughnutChartData:number[] = [];
-    
-  public doughnutChartType:string = 'doughnut';
-  public chartOptions: {
-    // legend: {
-    //     display: false
-    // }
+    private doughnutChartLabels: string[] = ['Equity', 'Fixed Cost', 'Cash'];
+    private doughnutChartData: number[] = [];
 
-    cutoutPercentage: 10
-}
-  
+    private doughnutChartType: string = 'doughnut';
+    private doughnutChartColors: any[] =
+        [
+            {
+                backgroundColor: ["#f16125", "#2774d0", "#1ca054"]
+            }
+        ]
+
+    private options: {
+        responsive: true
+        cutoutPercentage: 80
+    }
+
 
     constructor() { }
 
-    ngOnInit() { 
+    ngOnInit() {
         this.doughnutChartData = [
             this.item.equity,
             this.item.fixedIncome,
             this.item.cash
-          ];
+        ];
     }
 
-    public chartClicked(e:any):void {
+    private chartClicked(e: any): void {
     }
-   
-    public chartHovered(e:any):void {
+
+    private chartHovered(e: any): void {
     }
-  
-    toggle(event){
+
+    toggle(event) {
         this.applyClass = !this.applyClass;
         this.itemSelected.emit(this.item)
         this.itemChecked.emit(event.checked)

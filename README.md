@@ -26,11 +26,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-
-## HighChart Tutorials:
-https://medium.com/@balramchavan/using-highcharts-with-angular-5-6c6564a55cf0
-https://github.com/ultrasonicsoft/Highcharts-ng5-demo/blob/master/src/app/app.component.ts
-http://jsfiddle.net/Behseini/8084edvj/
-
-##CHat.js with angular
-https://alligator.io/angular/chartjs-ng2-charts/
