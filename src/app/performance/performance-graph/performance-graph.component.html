@@ -48,7 +48,9 @@
             <app-performance-list (selectedItem)="itemSelected($event)" (itemChecked)="checkedItem($event)"></app-performance-list>
 
             <div *ngFor="let item of items">
-                {{item}}
+                <app-performance-selected-item
+                [itemSelected] = item>
+                </app-performance-selected-item>
             </div>
 
         </mat-card-content>

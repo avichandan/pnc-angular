@@ -13,7 +13,7 @@ import { PerformanceComponent} from './performance/performance.component';
 import { PerformanceGraphComponent } from './performance/performance-graph/performance-graph.component';
 import { PerformancelistComponent } from './performance/performance-graph/performance-list/performance-list.component';
 import { PerformanceItemComponent } from './performance/performance-graph/performance-item/performance.item';
-
+import { PerformanceSelectedItemComponent } from './performance/performance-graph/performance-selected-item/performance-selected-item'
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -21,6 +21,7 @@ import { PerformanceItemComponent } from './performance/performance-graph/perfor
     PerformanceGraphComponent,
     PerformancelistComponent,
     PerformanceItemComponent,
+    PerformanceSelectedItemComponent,
     AppComponent
   ],
   imports: [

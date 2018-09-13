@@ -18,11 +18,13 @@ export class PerformanceItemComponent implements OnInit {
   public doughnutChartData:number[] = [];
     
   public doughnutChartType:string = 'doughnut';
-//   public chartOptions: {
-//     legend: {
-//         display: false
-//     }
-// }
+  public chartOptions: {
+    // legend: {
+    //     display: false
+    // }
+
+    cutoutPercentage: 10
+}
   
 
     constructor() { }
