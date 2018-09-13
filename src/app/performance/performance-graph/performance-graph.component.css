@@ -164,3 +164,9 @@ span.aggregate-info {
 .mat-slide-toggle-thumb-container {
     top: -2px;
 }
+
+.details-tiles-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

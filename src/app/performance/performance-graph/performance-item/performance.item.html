@@ -1,16 +1,10 @@
 <mat-card>
-    <div style="display: block">
-        <canvas baseChart
-                    [data]="doughnutChartData"
-                    [labels] = "doughnutChartLabels"
-                    [chartType]="doughnutChartType"
-                    [options]="chartOptions"
-                    [legend] = false
-                    (chartHover)="chartHovered($event)"
-                    (chartClick)="chartClicked($event)">
+    <div class="benchmark-tiles-container">
+        <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" [options]="chartOptions" [legend]=false (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
         </canvas>
-        <p>{{ item.title }}</p>
-        <p>
+        <p class="benchmark-name">{{ item.title }}</p>
+        <p class="benchmark-toggle-btn">
+            <span class="benchmark-toggle-name">Demo Text</span>
             <mat-slide-toggle (change)="toggle($event)"></mat-slide-toggle>
         </p>
     </div>
