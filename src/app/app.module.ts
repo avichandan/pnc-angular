@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent} from './header/header.component';
+import { FooterComponent  } from './footer/footer.component';
 import { PerformanceComponent} from './performance/performance.component';
 import { PerformanceGraphComponent } from './performance/performance-graph/performance-graph.component';
 import { PerformancelistComponent } from './performance/performance-graph/performance-list/performance-list.component';
@@ -22,7 +23,8 @@ import { PerformanceSelectedItemComponent } from './performance/performance-grap
     PerformancelistComponent,
     PerformanceItemComponent,
     PerformanceSelectedItemComponent,
-    AppComponent
+    AppComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
