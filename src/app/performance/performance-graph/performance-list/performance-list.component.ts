@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { PerformanceItem } from '../../../models/performance-item.interface';
+import { performanceItems } from '../../../models/performance-item.model'
 
 @Component({
     selector: 'app-performance-list',
@@ -8,12 +10,14 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 export class PerformancelistComponent implements OnInit {
 
-    items = [1, 2, 3, 4];
+    items: PerformanceItem[];
     @Output('selectedItem') selectedItem = new EventEmitter();
     @Output('itemChecked') itemChecked = new EventEmitter()
     constructor() { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.items = performanceItems;
+     }
 
     selectThisItem(item){
         this.selectedItem.emit(item)
