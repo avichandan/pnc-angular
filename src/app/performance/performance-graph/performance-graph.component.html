@@ -54,8 +54,10 @@
               Compare with your target allocation
             </mat-panel-title>
           </mat-expansion-panel-header>
-          <div *ngFor="let item of items">
-            <app-performance-selected-item [itemSelected]=item>
+          <div *ngFor="let item of items; let i = index">
+            <app-performance-selected-item 
+            [itemSelected] = item
+            [index]= i>
             </app-performance-selected-item>
           </div>
         </mat-expansion-panel>

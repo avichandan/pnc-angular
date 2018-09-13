@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { PerformanceItem } from '../../../models/performance-item.interface';
 
 @Component({
@@ -10,7 +10,7 @@ import { PerformanceItem } from '../../../models/performance-item.interface';
 export class PerformanceSelectedItemComponent implements OnInit {
 
     @Input('itemSelected') item: PerformanceItem;
-
+    @Input ('index') index: number;
   public doughnutChartLabels:string[] = ['Equity', 'Fixed Cost', 'Cash'];
   public doughnutChartData:number[] = [];
     

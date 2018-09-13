@@ -13,6 +13,7 @@ export class PerformanceItemComponent implements OnInit {
     @Input('index') index: any;
     @Output('selectedItem') itemSelected = new EventEmitter<PerformanceItem>();
     @Output('checkedItem') itemChecked = new EventEmitter();
+    applyClass: boolean = false;
 
   public doughnutChartLabels:string[] = ['Equity', 'Fixed Cost', 'Cash'];
   public doughnutChartData:number[] = [];
@@ -30,7 +31,6 @@ export class PerformanceItemComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { 
-        console.log(this.item)
         this.doughnutChartData = [
             this.item.equity,
             this.item.fixedIncome,
@@ -45,6 +45,7 @@ export class PerformanceItemComponent implements OnInit {
     }
   
     toggle(event){
+        this.applyClass = !this.applyClass;
         this.itemSelected.emit(this.item)
         this.itemChecked.emit(event.checked)
     }

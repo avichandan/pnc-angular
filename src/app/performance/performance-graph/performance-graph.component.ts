@@ -4,6 +4,7 @@ import * as Highcharts from 'highcharts';
 
 import {performanceItems} from '../../models/performance-item.model'
 import { PerformanceItem } from '../../models/performance-item.interface';
+import { targetPerformanceItem } from '../../models/performance-item.model';
 
 @Component({
     selector: 'app-performance-graph',
@@ -24,11 +25,13 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
     constructor() { }
 
     ngOnInit() {
-      performanceItems.forEach(item => {
-        if(item.target){
-          this.items.push(item)
-        }
-      })
+      // performanceItems.forEach(item => {
+      //   if(item.target){
+      //     this.items.push(item)
+      //   }
+      // })
+
+      this.items.push(targetPerformanceItem);
      }
 
     ngAfterViewInit() {

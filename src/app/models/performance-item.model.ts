@@ -43,4 +43,12 @@ export const performanceItems: PerformanceItem[] = [
         fixedIncome: 24,
         cash: 11
     }
-]
+];
+
+export const targetPerformanceItem: PerformanceItem = {
+        title: 'Your Target Allocation',
+        equity: 33,
+        target: false,
+        fixedIncome: 67,
+        cash: 0
+}
