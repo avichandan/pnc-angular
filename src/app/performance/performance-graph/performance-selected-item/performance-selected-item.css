@@ -1,7 +1,3 @@
-.target-item {
-    background-color: aqua;
-}
-
 p.tile-heading {
     font-size: 17px;
     font-family: 'PT Sans', sans-serif;
@@ -17,4 +13,8 @@ p.tile-equity, p.tile-income, p.tile-cash {
 }
 p.tile-equity strong, p.tile-income strong, p.tile-cash strong {
     margin-left: 5px;
+}
+
+.target-item-detail {
+    padding-left: 60px;
 }

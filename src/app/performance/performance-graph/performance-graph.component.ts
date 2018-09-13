@@ -5,6 +5,8 @@ import * as Highcharts from 'highcharts';
 import {performanceItems} from '../../models/performance-item.model'
 import { PerformanceItem } from '../../models/performance-item.interface';
 import { targetPerformanceItem } from '../../models/performance-item.model';
+import { Branch } from '../../models/branch-performance.interface';
+ import {branches } from '../../models/branch-performance.model';
 
 @Component({
     selector: 'app-performance-graph',
@@ -16,6 +18,8 @@ import { targetPerformanceItem } from '../../models/performance-item.model';
 export class PerformanceGraphComponent implements OnInit, AfterViewInit {
 
     @ViewChild('chartTarget') chartTarget: ElementRef;
+
+    branches: Branch[] = []
 
     chart: Highcharts.ChartObject;
     items: Array<PerformanceItem> = [];
@@ -32,6 +36,7 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
       // })
 
       this.items.push(targetPerformanceItem);
+      this.branches = branches;
      }
 
     ngAfterViewInit() {

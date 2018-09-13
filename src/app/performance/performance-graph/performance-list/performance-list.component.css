@@ -6,11 +6,14 @@
     margin-bottom: 30px;
 }
 
+.show-item-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .show-items.ng-star-inserted {
-    display: inline-block;
     margin: 4px;
     width: 16%;
-    vertical-align: top;
 }
 
 .benchmarks-container h4 mat-icon {

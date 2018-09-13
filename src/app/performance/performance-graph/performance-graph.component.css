@@ -1,12 +1,13 @@
 .main-cart-wrapper {
     box-shadow: 0 0 5px rgba(0, 0, 0, .2);
     max-width: 1500px;
-    margin: 30px auto 0 auto;
+    margin: 30px auto 30px auto;
+    position: relative;
 }
 
 .mat-card:not([class*=mat-elevation-z]) {
     box-shadow: none;
-    padding: 24px 38px;
+    padding: 24px 38px 35px 38px;
 }
 
 .filter-wrapper {
@@ -171,7 +172,7 @@ span.aggregate-info {
     flex-wrap: wrap;
 }
 
-mat-expansion-panel.mat-expansion-panel.ng-tns-c15-2.mat-expanded.mat-expansion-panel-spacing {
+mat-expansion-panel.mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing {
     box-shadow: none;
     background: #f8f8f8;
     padding-bottom: 20px;
@@ -185,7 +186,7 @@ mat-panel-title.mat-expansion-panel-header-title {
     font-family: 'PT Sans', sans-serif;
 }
 
-mat-expansion-panel.mat-expansion-panel.ng-tns-c15-2 {
+mat-expansion-panel.mat-expansion-panel {
     box-shadow: none;
     background: #f8f8f8;
 }
@@ -206,4 +207,8 @@ mat-expansion-panel.mat-expansion-panel.ng-tns-c15-2 {
 
 .details-tiles {
     margin-bottom: 35px;
+}
+
+.main-cart-wrapper mat-card.mat-card {
+    box-shadow: none !important;
 }

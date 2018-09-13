@@ -42,3 +42,36 @@
 .mat-inner-group .mat-ink-bar {
     display: none;
 }
+
+.performance-branch-container {
+    max-width: 1500px;
+    margin:0 auto 200px auto;
+    display: flex;
+}
+
+.performance-branch-container .ng-star-inserted {
+    flex: 1;
+}
+
+.performance-branch-container .ng-star-inserted mat-card.mat-card {
+    display: block;
+    text-align: center;
+}
+
+.performance-branch-container .ng-star-inserted mat-card.mat-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    line-height: 20px;
+    margin-bottom: 9px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.performance-branch-container .ng-star-inserted mat-card.mat-card p {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    font-family: 'PT Sans', sans-serif;
+}

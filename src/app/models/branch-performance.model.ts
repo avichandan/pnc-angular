@@ -2,12 +2,12 @@ import { Branch } from "./branch-performance.interface";
 
 export const branches:Branch[] = [
     {
-        branchName: 'DOW JONES',
+        branchName: 'Dow Jones',
         profit: 21,
         loss: 0
     },
     {
-        branchName: 'NASDAQ',
+        branchName: 'Nasdaq',
         profit: 33,
         loss: 0
     },
@@ -17,7 +17,7 @@ export const branches:Branch[] = [
         loss: 17
     },
     {
-        branchName: 'BARCLAYS U.S TREASURY',
+        branchName: 'Barclays U.S Treasury',
         profit: 13,
         loss: 0
     }
