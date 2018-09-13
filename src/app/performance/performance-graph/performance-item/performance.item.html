@@ -2,11 +2,14 @@
     <div style="display: block">
         <canvas baseChart
                     [data]="doughnutChartData"
-                    [labels]="doughnutChartLabels"
                     [chartType]="doughnutChartType"
                     (chartHover)="chartHovered($event)"
                     (chartClick)="chartClicked($event)">
         </canvas>
+        <p>
+            <mat-slide-toggle
+            (change)="toggle($event)"></mat-slide-toggle>
+        </p>
     </div>
       
 </mat-card>

@@ -32,7 +32,13 @@
             </div>
 
             <div #chartTarget></div>
-            <app-performance-list></app-performance-list>
+            <app-performance-list
+            (selectedItem) = "itemSelected($event)"
+            (itemChecked) = "checkedItem($event)"></app-performance-list>
+
+            <div *ngFor = "let item of items">
+                {{item}}
+            </div>
 
         </mat-card-content>
     </mat-card>

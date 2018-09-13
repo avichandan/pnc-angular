@@ -13,6 +13,8 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
     @ViewChild('chartTarget') chartTarget: ElementRef;
 
     chart: Highcharts.ChartObject;
+    items: Array<number> = [];
+    item: any;
 
 
     constructor() { }
@@ -42,7 +44,7 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
           series: [{
             name: 'Jane',
             data: [1, 0, 4],
-            // dashStyle: 'Dash'
+            dashStyle: 'Dash'
           }, {
             name: 'John',
             data: [5, 7, 3]
@@ -52,6 +54,23 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
         this.chart = chart(this.chartTarget.nativeElement, options);
       }
     
+      itemSelected(item){
+       this.item = item;
+      }
+
+      checkedItem(checked){
+        console.log("checked", checked)
+        if(checked){
+         
+          this.items.push(this.item)
+        }
+        else {
+          const itemsdsd = this.items.splice(this.item, 1)
+          console.log("items", this.items);
+          console.log("item", this.item);
+          console.log("removed", itemsdsd)
+        }
+      }
     
       
     
