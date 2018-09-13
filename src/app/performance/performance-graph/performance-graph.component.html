@@ -54,8 +54,10 @@
                 </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="details-tiles-container">
-                <div *ngFor="let item of items" class="details-tiles">
-                    <app-performance-selected-item [itemSelected]=item>
+                <div *ngFor="let item of items; let i = index" class="details-tiles">
+                    <app-performance-selected-item 
+                    [itemSelected] = item
+                    [index] = i>
                     </app-performance-selected-item>
                 </div>
             </div>

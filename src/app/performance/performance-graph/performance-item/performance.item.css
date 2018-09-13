@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 .selected-item {
     background-color: green;
-=======
+}
 .benchmark-name {
     font-size: 15px;
     display: block;
@@ -26,5 +25,4 @@ span.benchmark-toggle-name {
 
 .benchmark-toggle-btn .mat-slide-toggle {
     vertical-align: middle;
->>>>>>> 519b7e62f7e4c5e00d2d5d9cbd3598b490477a7f
 }
