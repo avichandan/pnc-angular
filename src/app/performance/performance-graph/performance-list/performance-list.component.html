@@ -4,7 +4,9 @@
             <mat-icon class="gray-color">info</mat-icon>
         </h4>
     </div>
-    <div *ngFor="let item of items; let i = index" class="show-items">
-        <app-performance-item [itemPassed]=item [index]=i (selectedItem)="selectThisItem($event)" (checkedItem)="checkedItem($event)"></app-performance-item>
+    <div class="show-item-wrapper">
+        <div *ngFor="let item of items; let i = index" class="show-items">
+            <app-performance-item [itemPassed]=item [index]=i (selectedItem)="selectThisItem($event)" (checkedItem)="checkedItem($event)"></app-performance-item>
+        </div>
     </div>
 </div>
