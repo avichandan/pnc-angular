@@ -1,36 +1,48 @@
 <div class="main-cart-wrapper">
     <mat-card>
         <mat-card-content>
-            <div class="performance-div">
-                <h4>Performance</h4>
-                <p>Net of Fees
-                    <mat-icon matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
-                </p>
-                <p>39.1%</p>
-            </div>
+            <div class="filter-wrapper">
+                <div class="filter-left-col">
+                    <h4>Performance</h4>
+                    <p>Net of Fees <sub>*</sub>
+                        <mat-icon class="gray-color" matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
+                    </p>
+                </div>
+                <div class="filter-right-col">
+                    <div class="year-filter-info">
+                        <mat-form-field class="year-select">
+                            <mat-select placeholder="1 Year">
+                                <mat-option>1 Year</mat-option>
+                                <mat-option>2 Year</mat-option>
+                                <mat-option>3 Year</mat-option>
+                                <mat-option>4 Year</mat-option>
+                                <mat-option>5 Year</mat-option>
+                            </mat-select>
+                        </mat-form-field>
 
-            <div class="performance-div">
-                <h4>
-                    <select name="year-select" id="year">
-          <option value="1">1 YEAR</option>
-          <option value="2">2 YEAR</option>
-          <option value="3">1 YEAR</option>
-        </select>
-                    <mat-icon matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
-                </h4>
-
-                <div>
-                    <div>
-                        <mat-icon matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
-                        <h4>AGGREGATE</h4>
-                        <p>
-                            <mat-slide-toggle></mat-slide-toggle>
-                        </p>
+                        <span class="year-filter-info">
+                            <mat-icon class="gray-color" matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
+                        </span>
+                    </div>
+                    <div class="year-filter-value">
+                        <span>From 3/1/2017 to 2/1/2018</span>
                     </div>
                 </div>
-
             </div>
-
+            <div class="filter-wrapper">
+                <div class="filter-left-col">
+                    <p class="net-fee">39.1%</p>
+                </div>
+                <div class="filter-right-col">
+                    <span class="aggregate-info">
+                            <mat-icon class="gray-color" matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
+                    </span>
+                    <span class="name">Aggregate</span>
+                    <span class="filter-toggle-btn">
+                        <mat-slide-toggle></mat-slide-toggle>
+                    </span>
+                </div>
+            </div>
         </mat-card-content>
     </mat-card>
 </div>
