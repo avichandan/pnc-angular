@@ -178,6 +178,7 @@ mat-expansion-panel.mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing
     padding-bottom: 20px;
     padding-top: 10px;
 }
+
 mat-panel-title.mat-expansion-panel-header-title {
     color: #000;
     font-size: 18px;
@@ -211,4 +212,42 @@ mat-expansion-panel.mat-expansion-panel {
 
 .main-cart-wrapper mat-card.mat-card {
     box-shadow: none !important;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    span.year-filter-info {
+        right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mat-card:not([class*=mat-elevation-z]) {
+        padding: 24px 16px;
+    }
+    .filter-left-col {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .filter-right-col {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .mat-form-field {
+        width: 89%;
+        margin-right: 5px;
+    }
+    span.year-filter-info {
+        position: static;
+    }
+    p.net-fee {
+        margin-bottom: 20px;
+    }
+    .benchmarks-container h4 {
+        font-size: 14px !important;
+    }
+    mat-panel-title.mat-expansion-panel-header-title {
+        font-size: 16px;
+    }
 }

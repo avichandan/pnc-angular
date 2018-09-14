@@ -30,3 +30,15 @@
 .footer-container p.copy-right {
     color: #dcddde;
 }
+
+@media (max-width: 767px) {
+    .footer-container {
+        padding: 0 20px;
+    }
+    .footer-container p {
+        line-height: 23px;
+    }
+    .footer-wrapper {
+        padding: 20px 0;
+    }
+}

@@ -1,6 +1,7 @@
 .selected-item {
     background-color: #c0e48a;
 }
+
 .benchmark-name {
     font-size: 15px;
     display: block;
@@ -29,4 +30,15 @@ span.benchmark-toggle-name {
 
 .selected-item p.benchmark-toggle-btn {
     display: block;
+}
+
+@media (max-width: 767px) {
+    p.benchmark-toggle-btn {
+        margin: 10px 0 0;
+    }
+    span.benchmark-toggle-name[_ngcontent-c19] {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }

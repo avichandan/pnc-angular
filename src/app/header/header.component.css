@@ -121,3 +121,38 @@ a.menu-trgger i.material-icons {
     right: 30px;
     color: #7ed321;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header-left {
+        width: 53%;
+    }
+    .header-right {
+        width: 41%;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-left {
+        width: 85%;
+    }
+    .header-right {
+        width: 12%;
+    }
+    a.logo {
+        margin-right: 0;
+        border-right: none;
+        padding-right: 0;
+    }
+    a.wealth-insight {
+        display: block;
+        padding-left: 69px;
+        padding-top: 10px;
+    }
+    .header-bottom-wrapper {
+        padding: 0 20px;
+    }
+    .header-bottom-wrapper {
+        margin-bottom: 30px;
+        min-height: 100px;
+    }
+}

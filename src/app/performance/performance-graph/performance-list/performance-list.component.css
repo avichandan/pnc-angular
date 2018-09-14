@@ -41,3 +41,41 @@
 .benchmarks-wrapper .mat-card:not([class*=mat-elevation-z]):hover p.benchmark-toggle-btn {
     display: block;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .benchmarks-wrapper .mat-card:not([class*=mat-elevation-z]) {
+        padding: 20px 10px;
+    }
+    .benchmark-name {
+        font-size: 12px !important;
+        margin: 13px 0 0 !important;
+    }
+    span.benchmark-toggle-name {
+        display: block !important;
+        font-size: 11px !important;
+        margin-right: 0 !important;
+        margin-bottom: 11px !important;
+    }
+    p.benchmark-toggle-btn {
+        display: none;
+        margin: 10px 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .show-items.ng-star-inserted {
+        width: 46%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .show-item-wrapper {
+        display: block;
+    }
+    .benchmarks-wrapper .mat-card:not([class*=mat-elevation-z]) {
+        padding: 20px 10px;
+    }
+    .benchmark-name {
+        font-size: 12px !important;
+        margin: 10px 0 0 !important;
+    }
+}
