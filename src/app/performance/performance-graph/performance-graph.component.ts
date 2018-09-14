@@ -102,13 +102,15 @@ export class PerformanceGraphComponent implements OnInit {
         opposite: true,
         tickInterval: 4,
       },
+     
       series: [{
         name: 'Jane',
-        //dashStyle: 'Dash',
-        data: [1, 0, 4, 3, 4, 5, 6, 7, 7, 3, 4, 3]
+        data: [1, 0, 4, 3, 4, 5, 6, 7, 7, 3, 4, 3],
+        
       }, {
         name: 'John',
-        data: [6, 0, 7, 3, 1, 5, 6, 8, 7, 3, 2, 3]
+        data: [6, 0, 7, 3, 1, 5, 6, 8, 7, 3, 2, 3],
+
       }]
     };
 
