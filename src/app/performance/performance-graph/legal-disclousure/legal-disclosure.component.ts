@@ -1,4 +1,4 @@
- import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-legal-disclosure',
@@ -8,11 +8,17 @@
 
 export class LegalDisclosureComponent implements OnInit {
     open: boolean = false;
+    icon_expand: string = 'add';
     constructor() { }
 
     ngOnInit() { }
 
-    showDisclosure(){
-        this.open = !this.open;
+    showDisclosure() {
+        this.icon_expand = 'minimize';
+
+    }
+
+    showDisclosure1() {
+        this.icon_expand = 'add';
     }
 }
