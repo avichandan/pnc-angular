@@ -33,7 +33,8 @@ export class PerformanceGraphComponent implements OnInit {
   item: any;
   startYear: number;
   endYear: number;
-  xaxisLables: Array<any> = []
+  xaxisLables: Array<any> = [];
+  // axis: Array<number> = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 
 
   constructor(private branchPerformanceService: BranchPerformanceListService) { }
@@ -93,6 +94,11 @@ export class PerformanceGraphComponent implements OnInit {
         title: {
           text: ''
         },
+        labels: {
+          formatter: function () {
+            return this.axis.defaultLabelFormatter.call(this) + '%';
+        }            
+      },
         opposite: true,
         tickInterval: 4,
       },

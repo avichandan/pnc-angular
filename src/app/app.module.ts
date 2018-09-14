@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
+import { ChartModule } from 'angular2-highcharts';
 
 import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module'
@@ -19,6 +20,7 @@ import { BranchPerformanceComponent } from './performance/branch-performance/bra
 import { PerformanceListService } from './services/performance-list.service';
 import { BranchPerformanceListService } from './services/branch-performance.service';
 import { LegalDisclosureComponent } from './performance/performance-graph/legal-disclousure/legal-disclosure.component';
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -36,6 +38,7 @@ import { LegalDisclosureComponent } from './performance/performance-graph/legal-
     BrowserModule,
     BrowserAnimationsModule,
     ChartsModule,
+    ChartModule,
     MaterialModule,
     RouterModule,
     AppRoutingModule
