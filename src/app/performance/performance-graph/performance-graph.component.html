@@ -11,11 +11,11 @@
         <div class="filter-right-col">
           <div class="year-filter-info">
             <mat-form-field class="year-select">
-                <mat-select  [(value)]="selectedDefault.value" (selectionChange) = "selectionChanged($event.value)">
-                    <mat-option *ngFor = "let option of options" [value] = "option.value">
-                      {{ option.displayValue }}
-                    </mat-option>
-                </mat-select>
+              <mat-select [(value)]="selectedDefault.value" (selectionChange)="selectionChanged($event.value)">
+                <mat-option *ngFor="let option of options" [value]="option.value">
+                  {{ option.displayValue }}
+                </mat-option>
+              </mat-select>
             </mat-form-field>
 
             <span class="year-filter-info">
@@ -43,31 +43,32 @@
       </div>
 
       <div #chartTarget></div>
-      <app-performance-list (selectedItem)="itemSelected($event)" (itemChecked)="checkedItem($event)"></app-performance-list>       
-        <mat-accordion>
-            <mat-expansion-panel [expanded]="true">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                <h4>Compare with your target allocation</h4>
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <div class="details-tiles-container">
-                <div *ngFor="let item of items; let i = index" class="details-tiles">
-                    <app-performance-selected-item 
-                    [itemSelected] = item
-                    [index] = i>
-                    </app-performance-selected-item>
-                </div>
+      <app-performance-list (selectedItem)="itemSelected($event)" (itemChecked)="checkedItem($event)"></app-performance-list>
+      <mat-accordion>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <h4>Compare with your target allocation</h4>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="details-tiles-container">
+            <div *ngFor="let item of items; let i = index" class="details-tiles">
+              <app-performance-selected-item [itemSelected]=item [index]=i>
+              </app-performance-selected-item>
             </div>
-            </mat-expansion-panel>
-        </mat-accordion>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
     </mat-card-content>
   </mat-card>
 </div>
 
 <div class="performance-branch-container">
-  <div *ngFor = "let branch of branches">
-      <app-branch-performance
-          [branchPassed] = branch></app-branch-performance>
+  <div *ngFor="let branch of branches">
+    <app-branch-performance [branchPassed]=branch></app-branch-performance>
   </div>
+</div>
+
+<div>
+    <app-legal-disclosure></app-legal-disclosure>
 </div>

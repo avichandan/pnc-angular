@@ -18,6 +18,7 @@ import { PerformanceSelectedItemComponent } from './performance/performance-grap
 import { BranchPerformanceComponent } from './performance/branch-performance/branch-performance.component';
 import { PerformanceListService } from './services/performance-list.service';
 import { BranchPerformanceListService } from './services/branch-performance.service';
+import { LegalDisclosureComponent } from './performance/performance-graph/legal-disclousure/legal-disclosure.component';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -28,6 +29,7 @@ import { BranchPerformanceListService } from './services/branch-performance.serv
     PerformanceItemComponent,
     PerformanceSelectedItemComponent,
     BranchPerformanceComponent,
+    LegalDisclosureComponent,
     AppComponent
   ],
   imports: [

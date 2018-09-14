@@ -2,12 +2,10 @@ import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, ViewEncapsulat
 import { chart } from 'highcharts';
 import * as Highcharts from 'highcharts';
 import * as moment from 'moment';
-
-import {performanceItems} from '../../models/performance-item.model'
 import { PerformanceItem } from '../../models/performance-item.interface';
 import { targetPerformanceItem } from '../../models/performance-item.model';
 import { Branch } from '../../models/branch-performance.interface';
- import {branches } from '../../models/branch-performance.model';
+import { BranchPerformanceListService } from '../../services/branch-performance.service';
 
 @Component({
     selector: 'app-performance-graph',
@@ -20,7 +18,7 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
 
     @ViewChild('chartTarget') chartTarget: ElementRef;
 
-    branches: Branch[] = []
+    branches: Branch[];
     options = [
       {value: 1, displayValue: '1 YEAR'},
       {value: 2, displayValue: '2 YEAR'},
@@ -38,17 +36,12 @@ export class PerformanceGraphComponent implements OnInit, AfterViewInit {
     xaxisLables: Array<any> = []
 
 
-    constructor() { }
+    constructor(private branchPerformanceService: BranchPerformanceListService) { }
 
     ngOnInit() {
-      // performanceItems.forEach(item => {
-      //   if(item.target){
-      //     this.items.push(item)
-      //   }
-      // })
-
+     
       this.items.push(targetPerformanceItem);
-      this.branches = branches;
+      this.branches = this.branchPerformanceService.getBranchesList();
       this.endYear = parseInt(moment().format('YYYY'));
       this.startYear = this.endYear -1;
       
