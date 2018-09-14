@@ -79,7 +79,7 @@ export class PerformanceGraphComponent implements OnInit {
     const data = this.xaxisLables;
     const options: Highcharts.Options = {
       chart: {
-        type: 'line'
+        type: 'spline'
       },
       credits: {
         enabled: false
