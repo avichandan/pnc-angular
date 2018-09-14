@@ -84,14 +84,14 @@ export class PerformanceGraphComponent implements OnInit {
         enabled: false
       },
       title: {
-        text: 'Fruit Consumption'
+        text: ''
       },
       xAxis: {
         categories: data
       },
       yAxis: {
         title: {
-          text: 'Fruit eaten'
+          text: ''
         },
         opposite: true,
         tickInterval: 4,
