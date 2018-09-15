@@ -1,7 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, ViewEncapsulation } from '@angular/core';
-import { chart } from 'highcharts';
-import * as Highcharts from 'highcharts';
 import * as moment from 'moment';
+import * as c3 from 'c3';
 import { PerformanceItem } from '../../models/performance-item.interface';
 import { targetPerformanceItem } from '../../models/performance-item.model';
 import { Branch } from '../../models/branch-performance.interface';
@@ -16,8 +15,6 @@ import { BranchPerformanceListService } from '../../services/branch-performance.
 
 export class PerformanceGraphComponent implements OnInit {
 
-  @ViewChild('chartTarget') chartTarget: ElementRef;
-
   branches: Branch[];
   options = [
     { value: 1, displayValue: '1 YEAR' },
@@ -28,13 +25,11 @@ export class PerformanceGraphComponent implements OnInit {
   ];
 
   selectedDefault: object = { value: 1, displayValue: '1 YEAR' }
-  chart: Highcharts.ChartObject;
   items: Array<PerformanceItem> = [];
   item: any;
   startYear: number;
   endYear: number;
   xaxisLables: Array<any> = [];
-  // axis: Array<number> = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 
 
   constructor(private branchPerformanceService: BranchPerformanceListService) { }
@@ -46,76 +41,72 @@ export class PerformanceGraphComponent implements OnInit {
     this.endYear = parseInt(moment().format('YYYY'));
     this.startYear = this.endYear - 1;
 
-    this.getXaxisLabels();
-
   }
 
-  getXaxisLabels() {
-    for (let i = this.startYear; i <= this.endYear; i++) {
-      for (let j = 1; j <= 12; j++) {
-        if (i == this.endYear && j > 1) {
-          break;
+ 
+
+  ngAfterViewInit() {
+
+    let chart = c3.generate({
+      data: {
+        x: 'x',
+        columns: [
+          ['x', '2013-02-1', '2013-03-1', '2013-04-1', '2013-05-1','2013-06-1',
+           '2013-07-1','2013-08-1', '2013-09-1', '2013-10-1', '2013-11-1', '2013-12-1', '2014-01-1'],
+          ['data1', 30, 21, 10, 40, 15, 25, 41, 55, 14, 67, 85, 33],
+          ['data2', 13, 10, 14, 20, 15, 5, 47, 25, 62, 27, 57, 78],
+          ['data3', 13, 12, 17, 22, 19, 35, 23, 89, 94, 45, 15, 29]
+        ],
+        axes: {
+          data1: 'y2',
+          data2: 'y2',
+          data3: 'y2'
+        },
+        type: 'spline',
+        colors: {
+          data1: 'red',
+          data2: 'yellow',
+          data3: 'green'
+        },
+      },
+      axis: {
+        x: {
+          type: 'timeseries',
+          tick: {
+            values: ['2013-02-1', '2013-03-1', '2013-04-1', '2013-05-1','2013-06-1',
+            '2013-07-1','2013-08-1', '2013-09-1', '2013-10-1', '2013-11-1', '2013-12-1', '2014-01-1'],
+            format: function(value){
+              const monthEnd = moment(value).endOf('month')['_d'];
+              const updatedEndOfMonth = moment(monthEnd).format('DD');
+              return moment(value).format('M' + '/' + updatedEndOfMonth)
+            }
+            
+          }
+        },
+        y: {
+          show: false
+        },
+        y2: {
+          show: true,
+          min: 10,
+          max: 100,
+          label: {
+            text: '',
+            position: 'outer-middle',
+          },
+          tick: {
+            format: function (value) {
+              return value + '%';
+            },
+            outer: false
+          }
         }
-        var startDate = moment([i, j - 1]);
-        var endDate = moment(startDate).endOf('month');
-        const startDateFormatted = moment(startDate['_d']).format('M');
-        const endDateFormatted = moment(endDate['_d']).format('D');
-        const value = startDateFormatted + '/' + endDateFormatted;
-
-        this.xaxisLables.push(value);
-
-
-
       }
-    }
-    this.xaxisLables.splice(0, 1);
-    this.drawChart();
+    });
+
   }
 
-  // ngAfterViewInit() {
-  // }
 
-  drawChart() {
-    const data = this.xaxisLables;
-    const options: Highcharts.Options = {
-      chart: {
-        type: 'spline'
-      },
-      credits: {
-        enabled: false
-      },
-      title: {
-        text: ''
-      },
-      xAxis: {
-        categories: data
-      },
-      // yAxis: {
-      //   title: {
-      //     text: ''
-      //   },
-      //   labels: {
-      //     formatter: function () {
-      //       return this.axis.defaultLabelFormatter.call(this) + '%';
-      //     }
-      //   },
-      //   opposite: true,
-      //   tickInterval: 4,
-      // },
-
-      series: [{
-        name: 'Jane',
-        data: [1, 0, 4, 3, 4, 5, 6, 7, 7, 3, 4, 3],
-
-      }, {
-        name: 'John',
-        data: [6, 0, 7, 3, 1, 5, 6, 8, 7, 3, 2, 3],
-
-      }]
-    };
-
-    this.chart = chart(this.chartTarget.nativeElement, options);
-  }
 
   itemSelected(item) {
     this.item = item;
@@ -133,7 +124,5 @@ export class PerformanceGraphComponent implements OnInit {
   selectionChanged(value) {
     this.xaxisLables = [];
     this.startYear = this.endYear - value;
-    this.getXaxisLabels();
-    this.drawChart();
   }
 }
