@@ -1,0 +1,38 @@
+.selected-item {
+	background-color: #c0e48a;
+	p.benchmark-toggle-btn {
+		display: block;
+	}
+}
+.benchmark-name {
+	font-size: 15px;
+	display: block;
+	text-align: center;
+	margin: 20px 0 0;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.benchmark-toggle-btn {
+	display: none;
+	margin: 20px 0 0;
+	.mat-slide-toggle {
+		vertical-align: middle;
+	}
+}
+.benchmark-toggle-name {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 13px;
+	font-weight: 600;
+	margin-right: 10px;
+}
+@media (max-width: 767px) {
+	.benchmark-toggle-btn {
+		margin: 10px 0 0;
+	}
+	.benchmark-toggle-name {
+		display: block;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+}

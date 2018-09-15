@@ -1,0 +1,84 @@
+.benchmarks-container {
+	h4 {
+		font-size: 19px;
+		font-weight: 600;
+		text-transform: uppercase;
+		line-height: 22px;
+		margin-bottom: 30px;
+		mat-icon {
+			vertical-align: middle;
+			margin-left: 10px;
+		}
+	}
+}
+.show-item-wrapper {
+	display: flex;
+	justify-content: center;
+}
+.show-items.ng-star-inserted {
+	margin: 4px;
+	width: 16%;
+}
+.benchmarks-wrapper {
+	.mat-card {
+		&:not([class*=mat-elevation-z]) {
+			box-shadow: 0 0 5px rgba(0, 0, 0, .2) !important;
+			padding: 20px;
+			text-align: center;
+			cursor: pointer;
+			transition: all 0.3s ease-in;
+			&:hover {
+				background: #b4dfef;
+				p.benchmark-toggle-btn {
+					display: block;
+				}
+			}
+		}
+	}
+	margin-top: 70px;
+	min-height: 300px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+	.benchmarks-wrapper {
+		.mat-card {
+			&:not([class*=mat-elevation-z]) {
+				padding: 20px 10px;
+			}
+		}
+	}
+	.benchmark-name {
+		font-size: 12px !important;
+		margin: 13px 0 0 !important;
+	}
+	span.benchmark-toggle-name {
+		display: block !important;
+		font-size: 11px !important;
+		margin-right: 0 !important;
+		margin-bottom: 11px !important;
+	}
+	p.benchmark-toggle-btn {
+		display: none;
+		margin: 10px 0 0;
+	}
+}
+@media (max-width: 768px) {
+	.show-items.ng-star-inserted {
+		width: 46%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.show-item-wrapper {
+		display: block;
+	}
+	.benchmarks-wrapper {
+		.mat-card {
+			&:not([class*=mat-elevation-z]) {
+				padding: 20px 10px;
+			}
+		}
+	}
+	.benchmark-name {
+		font-size: 12px !important;
+		margin: 10px 0 0 !important;
+	}
+}

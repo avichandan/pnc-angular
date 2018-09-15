@@ -5,7 +5,7 @@ import { PerformanceListService } from '../../../services/performance-list.servi
 @Component({
     selector: 'app-performance-list',
     templateUrl: './performance-list.component.html',
-    styleUrls: ['./performance-list.component.css'],
+    styleUrls: ['./performance-list.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
 

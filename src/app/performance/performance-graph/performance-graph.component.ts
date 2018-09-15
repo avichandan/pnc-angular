@@ -10,7 +10,7 @@ import { BranchPerformanceListService } from '../../services/branch-performance.
 @Component({
   selector: 'app-performance-graph',
   templateUrl: 'performance-graph.component.html',
-  styleUrls: ['./performance-graph.component.css'],
+  styleUrls: ['./performance-graph.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 
@@ -90,18 +90,18 @@ export class PerformanceGraphComponent implements OnInit {
       xAxis: {
         categories: data
       },
-      yAxis: {
-        title: {
-          text: ''
-        },
-        labels: {
-          formatter: function () {
-            return this.axis.defaultLabelFormatter.call(this) + '%';
-          }
-        },
-        opposite: true,
-        tickInterval: 4,
-      },
+      // yAxis: {
+      //   title: {
+      //     text: ''
+      //   },
+      //   labels: {
+      //     formatter: function () {
+      //       return this.axis.defaultLabelFormatter.call(this) + '%';
+      //     }
+      //   },
+      //   opposite: true,
+      //   tickInterval: 4,
+      // },
 
       series: [{
         name: 'Jane',

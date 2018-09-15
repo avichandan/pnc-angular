@@ -1,0 +1,58 @@
+/* .slected-performance-item.target-item canvas.chartjs-render-monitor {
+    display: inline-block !important;
+    vertical-align: top;
+    width: 215px !important;
+    height: auto !important;
+}
+
+canvas.chartjs-render-monitor {
+    display: block !important;
+}
+
+.slected-performance-item.target-item {
+    width: 377px;
+} */
+.tile-heading {
+	font-size: 18px;
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 600;
+	line-height: 19px;
+	margin-bottom: 10px;
+	color: #1a1a1a;
+}
+.tile-equity {
+	font-size: 18px;
+	font-family: 'PT Sans', sans-serif;
+	margin: 0 0 5px;
+	line-height: 19px;
+	font-weight: 500;
+	strong {
+		margin-left: 5px;
+	}
+}
+.tile-income {
+	font-size: 18px;
+	font-family: 'PT Sans', sans-serif;
+	margin: 0 0 5px;
+	line-height: 19px;
+	font-weight: 500;
+	strong {
+		margin-left: 5px;
+	}
+}
+.tile-cash {
+	font-size: 18px;
+	font-family: 'PT Sans', sans-serif;
+	margin: 0 0 5px;
+	line-height: 19px;
+	font-weight: 500;
+	strong {
+		margin-left: 5px;
+	}
+}
+.target-item-detail {
+	padding-left: 30px;
+	margin-top: 30px;
+	vertical-align: top;
+	display: inline-block;
+}

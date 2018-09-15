@@ -4,7 +4,7 @@ import { PerformanceItem } from '../../../models/performance-item.interface';
 @Component({
     selector: 'app-performance-selected-item',
     templateUrl: './performance-selected-item.html',
-    styleUrls: ['./performance-selected-item.css']
+    styleUrls: ['./performance-selected-item.scss']
 })
 
 export class PerformanceSelectedItemComponent implements OnInit {
