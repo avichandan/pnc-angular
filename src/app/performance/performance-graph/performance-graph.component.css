@@ -1,7 +1,7 @@
 .main-cart-wrapper {
-    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-    max-width: 1300px;
-    margin: 30px auto 30px auto;
+    box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.18);
+    max-width: 1200px;
+    margin: 30px auto;
     position: relative;
 }
 
@@ -173,22 +173,24 @@ span.aggregate-info {
 }
 
 mat-expansion-panel.mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing {
-    box-shadow: none;
-    background: #f8f8f8;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.18);
+    background: rgba(204, 204, 204, 0.15);
     padding-bottom: 20px;
     padding-top: 10px;
+    border-radius: 1px;
 }
 
-mat-panel-title.mat-expansion-panel-header-title {
-    color: #000;
+mat-panel-title.mat-expansion-panel-header-title h4 {
+    color: #1a1a1a;
     font-size: 18px;
-    line-height: 23px;
+    line-height: 19px;
     font-weight: 500;
     font-family: 'PT Sans', sans-serif;
+    margin: 0;
 }
 
 mat-expansion-panel.mat-expansion-panel {
-    box-shadow: none;
+    box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.18) !important;
     background: #f8f8f8;
 }
 

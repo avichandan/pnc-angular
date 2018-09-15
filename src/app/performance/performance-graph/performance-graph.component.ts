@@ -75,7 +75,7 @@ export class PerformanceGraphComponent implements OnInit {
   // ngAfterViewInit() {
   // }
 
-  drawChart(){
+  drawChart() {
     const data = this.xaxisLables;
     const options: Highcharts.Options = {
       chart: {
@@ -97,16 +97,16 @@ export class PerformanceGraphComponent implements OnInit {
         labels: {
           formatter: function () {
             return this.axis.defaultLabelFormatter.call(this) + '%';
-        }            
-      },
+          }
+        },
         opposite: true,
         tickInterval: 4,
       },
-     
+
       series: [{
         name: 'Jane',
         data: [1, 0, 4, 3, 4, 5, 6, 7, 7, 3, 4, 3],
-        
+
       }, {
         name: 'John',
         data: [6, 0, 7, 3, 1, 5, 6, 8, 7, 3, 2, 3],
@@ -130,15 +130,10 @@ export class PerformanceGraphComponent implements OnInit {
       this.items.splice(this.item, 1)
     }
   }
-
   selectionChanged(value) {
     this.xaxisLables = [];
     this.startYear = this.endYear - value;
     this.getXaxisLabels();
     this.drawChart();
   }
-
-
-
-
 }

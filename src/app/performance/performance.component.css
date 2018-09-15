@@ -23,6 +23,10 @@
 
 .mat-inner-group .mat-tab-label {
     font-weight: 500;
+    color: #000;
+    line-height: 17px;
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .mat-inner-group .mat-tab-label-active {
@@ -42,7 +46,7 @@
 }
 
 .performance-branch-container {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto 200px auto;
     display: flex;
 }
@@ -54,25 +58,31 @@
 .performance-branch-container .ng-star-inserted mat-card.mat-card {
     display: block;
     text-align: center;
+    box-shadow: 0 1px 8px 0px rgba(0, 0, 0, 0.18);
+    border-radius: 1.43px;
+    background: #fff;
 }
 
 .performance-branch-container .ng-star-inserted mat-card.mat-card h4 {
-    font-size: 15px;
+    font-size: 16.07px;
     font-weight: 600;
     text-transform: uppercase;
     display: block;
-    line-height: 20px;
+    line-height: 19px;
     margin-bottom: 9px;
     font-family: 'PT Sans', sans-serif;
+    color: #000;
 }
 
 .performance-branch-container .ng-star-inserted mat-card.mat-card p {
-    font-size: 14px;
+    font-size: 17.02px;
+    line-height: 20px;
     font-weight: 600;
     text-transform: uppercase;
     display: block;
     font-family: 'PT Sans', sans-serif;
 }
+
 
 @media (max-width: 767px) {
     .performance-branch-container {

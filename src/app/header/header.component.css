@@ -83,7 +83,7 @@ a.setting {
 }
 
 .header-bottom-wrapper {
-    min-height: 160px;
+    min-height: 127px;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#026cb8+0,1748a1+100 */
     background: #026cb8;
     /* Old browsers */
@@ -96,7 +96,7 @@ a.setting {
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#026cb8', endColorstr='#1748a1', GradientType=0);
     /* IE6-9 */
     padding: 0 90px;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
 }
 
 a.menu-trgger {

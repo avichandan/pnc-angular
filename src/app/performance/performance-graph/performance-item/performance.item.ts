@@ -13,6 +13,7 @@ export class PerformanceItemComponent implements OnInit {
     @Input('index') index: any;
     @Output('selectedItem') itemSelected = new EventEmitter<PerformanceItem>();
     @Output('checkedItem') itemChecked = new EventEmitter();
+    @Output('selectedItemToDisplay') selectedItemToDisplay = new EventEmitter();
     applyClass: boolean = false;
 
     private doughnutChartLabels: string[] = ['Equity', 'Fixed Cost', 'Cash'];
@@ -26,7 +27,7 @@ export class PerformanceItemComponent implements OnInit {
             }
         ]
 
-    private options:any = {
+    private options: any = {
         responsive: true,
         cutoutPercentage: 80
     }
@@ -50,7 +51,8 @@ export class PerformanceItemComponent implements OnInit {
 
     toggle(event) {
         this.applyClass = !this.applyClass;
-        this.itemSelected.emit(this.item)
-        this.itemChecked.emit(event.checked)
+        this.itemSelected.emit(this.item);
+        this.itemChecked.emit(event.checked);
+        this.selectedItemToDisplay.emit(this.applyClass);
     }
 }

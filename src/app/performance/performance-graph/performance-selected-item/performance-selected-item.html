@@ -1,20 +1,14 @@
-<div class="slected-performance-item" [ngClass] = "(index == 0) ? 'target-item': '' ">
+<div class="slected-performance-item" [ngClass]="(index == 0) ? 'target-item': 'selected-item-details' ">
   <div style="display: block">
-    <canvas baseChart 
-    [data]="doughnutChartData" 
-    [labels]="doughnutChartLabels" 
-    [chartType]="doughnutChartType"
-    [options]="options" 
-    [legend]=false 
-    [colors] = "doughnutChartColors"
-    (chartHover)="chartHovered($event)" 
-    (chartClick)="chartClicked($event)">
+    <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"
+      [options]="options" [legend]=false [colors]="doughnutChartColors" (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)">
     </canvas>
     <div class="target-item-detail">
       <p class="tile-heading">{{item.title}} Allocation</p>
-      <p class="tile-equity">{{item.equity}}.0% <strong style="color: #f16125">Equity</strong> </p>
-      <p class="tile-income">{{item.fixedIncome}}.0% <strong style="color: #2774d0">Fixed Income</strong></p>
-      <p class="tile-cash" *ngIf =" index != 0">{{item.cash}}.0% <strong style="color: #1ca054">Cash</strong></p>
+      <p class="tile-equity">{{item.equity}}.0% <strong style="color: #f36121">Equity</strong> </p>
+      <p class="tile-income">{{item.fixedIncome}}.0% <strong style="color: #2775d3">Fixed Income</strong></p>
+      <p class="tile-cash" *ngIf=" index != 0">{{item.cash}}.0% <strong style="color: #1ca054">Cash</strong></p>
     </div>
   </div>
 </div>

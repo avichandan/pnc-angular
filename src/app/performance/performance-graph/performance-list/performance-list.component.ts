@@ -11,8 +11,10 @@ import { PerformanceListService } from '../../../services/performance-list.servi
 
 export class PerformancelistComponent implements OnInit {
     items: PerformanceItem[];
+    selectedItemDisplay: boolean;
     @Output('selectedItem') selectedItem = new EventEmitter();
-    @Output('itemChecked') itemChecked = new EventEmitter()
+    @Output('itemChecked') itemChecked = new EventEmitter();
+    @Output('selectItemDis') selectItemDis = new EventEmitter();
 
     constructor(private performanceListService: PerformanceListService) { }
 
@@ -26,5 +28,11 @@ export class PerformancelistComponent implements OnInit {
 
     checkedItem(checked) {
         this.itemChecked.emit(checked)
+    }
+    itemSelectedToDisplay(event) {
+        console.log('event', event);
+        this.selectedItemDisplay = event;
+        this.selectItemDis.emit(this.selectedItemDisplay)
+
     }
 }

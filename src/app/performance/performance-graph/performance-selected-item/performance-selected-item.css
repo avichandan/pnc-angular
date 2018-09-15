@@ -1,21 +1,42 @@
 p.tile-heading {
-    font-size: 17px;
+    font-size: 18px;
     font-family: 'PT Sans', sans-serif;
     font-weight: 600;
-    line-height: 20px;
+    line-height: 19px;
     margin-bottom: 10px;
+    color: #1a1a1a;
 }
 
 p.tile-equity, p.tile-income, p.tile-cash {
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'PT Sans', sans-serif;
     margin: 0 0 5px;
+    line-height: 19px;
+    font-weight: 500;
 }
 p.tile-equity strong, p.tile-income strong, p.tile-cash strong {
     margin-left: 5px;
 }
 
-.target-item-detail {
-    padding-left: 60px;
+
+.target-item-detail{
+    padding-left: 30px;
     margin-top: 30px;
+    vertical-align: top;
+    display: inline-block;
 }
+
+/* .slected-performance-item.target-item canvas.chartjs-render-monitor {
+    display: inline-block !important;
+    vertical-align: top;
+    width: 215px !important;
+    height: auto !important;
+}
+
+canvas.chartjs-render-monitor {
+    display: block !important;
+}
+
+.slected-performance-item.target-item {
+    width: 377px;
+} */
