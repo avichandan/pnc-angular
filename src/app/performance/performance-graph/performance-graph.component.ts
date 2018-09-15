@@ -30,6 +30,7 @@ export class PerformanceGraphComponent implements OnInit {
   startYear: number;
   endYear: number;
   xaxisLables: Array<any> = [];
+  itemSelectedDisVariable: boolean = false;
 
 
   constructor(private branchPerformanceService: BranchPerformanceListService) { }
@@ -124,5 +125,11 @@ export class PerformanceGraphComponent implements OnInit {
   selectionChanged(value) {
     this.xaxisLables = [];
     this.startYear = this.endYear - value;
+  }
+
+
+  itemSelectedDis(event){
+    console.log("eventsss", event);
+    this.itemSelectedDisVariable = event;
   }
 }

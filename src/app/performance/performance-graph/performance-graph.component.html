@@ -43,7 +43,10 @@
       </div>
       
       <div id="chart"></div> 
-      <app-performance-list (selectedItem)="itemSelected($event)" (itemChecked)="checkedItem($event)"></app-performance-list>
+      <app-performance-list 
+      (selectedItem)="itemSelected($event)" 
+      (itemChecked)="checkedItem($event)"
+      (selectItemDis) = "itemSelectedDis($event)"></app-performance-list>
       <mat-accordion>
         <mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header>
@@ -52,8 +55,10 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="details-tiles-container">
-            <div *ngFor="let item of items; let i = index" class="details-tiles">
-              <app-performance-selected-item [itemSelected]=item [index]=i>
+            <div *ngFor="let item of items; let i = index" class="details-tiles" [ngClass] = "(itemSelectedDisVariable) ? 'add-another-class': ''">
+              <app-performance-selected-item 
+              [itemSelected]=item 
+              [index]=i>
               </app-performance-selected-item>
             </div>
           </div>
