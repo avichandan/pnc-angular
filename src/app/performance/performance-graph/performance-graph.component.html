@@ -5,7 +5,7 @@
         <div class="filter-left-col">
           <h4>Performance</h4>
           <p>Net of Fees <sub>*</sub>
-            <mat-icon class="gray-color" matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
+            <mat-icon class="info-icon" matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
           </p>
         </div>
         <div class="filter-right-col">
@@ -19,7 +19,7 @@
             </mat-form-field>
 
             <span class="year-filter-info">
-              <mat-icon class="gray-color" matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
+              <mat-icon class="info-icon" matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
             </span>
           </div>
           <div class="year-filter-value">
@@ -33,7 +33,7 @@
         </div>
         <div class="filter-right-col">
           <span class="aggregate-info">
-            <mat-icon class="gray-color" matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
+            <mat-icon class="info-icon" matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
           </span>
           <span class="name">Aggregate</span>
           <span class="filter-toggle-btn">
@@ -41,12 +41,9 @@
           </span>
         </div>
       </div>
-      
-      <div id="chart"></div> 
-      <app-performance-list 
-      (selectedItem)="itemSelected($event)" 
-      (itemChecked)="checkedItem($event)"
-      (selectItemDis) = "itemSelectedDis($event)"></app-performance-list>
+
+      <div id="chart"></div>
+      <app-performance-list (selectedItem)="itemSelected($event)" (itemChecked)="checkedItem($event)" (selectItemDis)="itemSelectedDis($event)"></app-performance-list>
       <mat-accordion>
         <mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header>
@@ -55,10 +52,8 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="details-tiles-container">
-            <div *ngFor="let item of items; let i = index" class="details-tiles" [ngClass] = "(itemSelectedDisVariable) ? 'add-another-class': ''">
-              <app-performance-selected-item 
-              [itemSelected]=item 
-              [index]=i>
+            <div *ngFor="let item of items; let i = index" class="details-tiles" [ngClass]="(itemSelectedDisVariable) ? 'add-another-class': ''">
+              <app-performance-selected-item [itemSelected]=item [index]=i>
               </app-performance-selected-item>
             </div>
           </div>

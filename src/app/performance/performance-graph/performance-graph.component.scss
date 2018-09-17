@@ -1,235 +1,243 @@
 .main-cart-wrapper {
-	box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.18);
-	max-width: 1200px;
-	margin: 30px auto;
-	position: relative;
-	mat-card.mat-card {
-		box-shadow: none !important;
-	}
+  box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.18);
+  max-width: 1200px;
+  margin: 30px auto 35px;
+  position: relative;
+  mat-card.mat-card {
+    box-shadow: none !important;
+  }
 }
-.mat-card:not([class*=mat-elevation-z]) {
-    box-shadow: none;
-    padding: 24px 38px 35px 38px;
+.mat-card:not([class*="mat-elevation-z"]) {
+  box-shadow: none;
+  padding: 21px 44px 35px 44px;
 }
 .filter-wrapper {
-	width: 100%;
-	.mat-icon {
-		vertical-align: middle;
-	}
-	&:first-child {
-		margin-bottom: 25px;
-	}
+  width: 100%;
+  .mat-icon {
+    vertical-align: middle;
+  }
+  &:first-child {
+    margin-bottom: 25px;
+  }
 }
 .filter-left-col {
-	display: inline-block;
-	width: 49%;
-	vertical-align: top;
-	h4 {
-		font-size: 22px;
-		text-transform: uppercase;
-		font-weight: 600;
-		color: #000;
-		margin: 0 0 15px;
-	}
-	p {
-		margin: 0;
-		color: #333333;
-		font-size: 17px;
-		line-height: 20px;
-		.mat-icon {
-			margin-left: 10px;
-		}
-	}
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+  h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 15px;
+    line-height: 24px;
+    font-family: "PT Sans", sans-serif;
+  }
+  p {
+    margin: 0;
+    color: #333333;
+    font-size: 14px;
+    line-height: 15px;
+    .mat-icon {
+      margin-left: 10px;
+    }
+  }
 }
 .filter-right-col {
-	display: inline-block;
-	width: 49%;
-	vertical-align: top;
-	text-align: right;
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+  text-align: right;
 }
-.gray-color {
-	color: #ccc;
+.mat-icon.info-icon {
+  position: relative;
+  background: url(../../../assets/images/rounded-info.png) no-repeat center center;
+  color: transparent;
 }
 .year-select {
-	.mat-form-field-infix {
-		border: 1px solid #333;
-		text-align: right;
-		color: #000;
-		height: 40px;
-		line-height: 26px;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
+  .mat-form-field-infix {
+    border: 1px solid #333;
+    text-align: right;
+    color: #000;
+    height: 40px;
+    line-height: 26px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .mat-select {
-	font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 .mat-form-field-appearance-legacy {
-	.mat-form-field-label {
-		color: #000;
-		padding-right: 30px;
-		font-size: 16px;
-		text-transform: uppercase;
-		line-height: 20px;
-	}
+  .mat-form-field-label {
+    color: #000;
+    padding-right: 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 20px;
+  }
 }
 span.year-filter-info {
-    position: absolute;
-    right: 35px;
-    top: 32px;
+  position: absolute;
+  right: 35px;
+  top: 32px;
 }
 .year-filter-value {
-	margin-top: -8px;
-	color: #333;
-	font-size: 14px;
+  margin-top: -8px;
+  color: #333;
+  font-size: 14px;
 }
 .filter-wrapper.last {
-	margin-bottom: 35px;
+  margin-bottom: 35px;
 }
 .net-fee {
-	font-size: 20px;
-	font-weight: 600;
-	position: relative;
-	display: inline-block;
-	min-width: 150px;
-	&::after {
-		content: '';
-		content: '';
-		height: 7px;
-		width: 110px;
-		position: absolute;
-		display: block;
-		left: 0;
-		background: #2275d3;
-		bottom: -18px;
-		z-index: 9;
-	}
+  font-size: 20px !important;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  min-width: 140px;
+  margin-right: 36px !important;
+  &::after {
+    content: "";
+    content: "";
+    height: 7px;
+    width: 140px;
+    position: absolute;
+    display: block;
+    left: 0;
+    background: #2275d3;
+    bottom: -18px;
+    z-index: 9;
+  }
+  &:last-child {
+    margin-right: 0 !important;
+  }
 }
 .name {
-	color: #333333;
-	font-size: 15px;
-	font-weight: 600;
-	text-transform: uppercase;
-	display: inline-block;
-	margin: 0 10px;
-	vertical-align: super;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: super;
 }
 .mat-slide-toggle-bar {
-	background-color: #fff;
-	border: 1px solid #dedede;
+  background-color: #fff;
+  border: 1px solid #dedede;
 }
 .aggregate-info {
-	vertical-align: super;
+  vertical-align: super;
 }
 .mat-slide-toggle-label {
-	.mat-slide-toggle-bar {
-		position: relative;
-		width: 50px;
-		height: 26px;
-		flex-shrink: 0;
-		border-radius: 15px;
-	}
+  .mat-slide-toggle-bar {
+    position: relative;
+    width: 55px;
+    height: 31px;
+    flex-shrink: 0;
+    border-radius: 15px;
+  }
 }
 .mat-slide-toggle-thumb-container {
-	.mat-slide-toggle-thumb {
-		height: 27px;
-		width: 27px;
-	}
-	top: -2px;
+  .mat-slide-toggle-thumb {
+    height: 31px;
+    width: 31px;
+  }
+  top: -2px;
 }
 .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
-    background-color: #2275d3;
-    right: -6px;
-    position: relative;
+  background-color: #2275d3;
+  right: -6px;
+  position: relative;
 }
 
 .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
-    background-color: rgba(34, 117, 211, 0.4);
+  background-color: rgba(34, 117, 211, 0.4);
 }
 .details-tiles-container {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 mat-expansion-panel.mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing {
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.18);
-	background: rgba(204, 204, 204, 0.15);
-	padding-bottom: 20px;
-	padding-top: 10px;
-	border-radius: 1px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.18);
+  background: rgba(204, 204, 204, 0.15);
+  padding-bottom: 20px;
+  padding-top: 10px;
+  border-radius: 1px;
 }
 mat-panel-title.mat-expansion-panel-header-title {
-	h4 {
-		color: #1a1a1a;
-		font-size: 18px;
-		line-height: 19px;
-		font-weight: 500;
-		font-family: 'PT Sans', sans-serif;
-		margin: 0;
-	}
+  h4 {
+    color: #000;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    font-family: "PT Sans", sans-serif;
+    margin: 0;
+  }
 }
 mat-expansion-panel.mat-expansion-panel {
-	box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.18) !important;
-	background: #f8f8f8;
+  box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.18) !important;
+  background: #f8f8f8;
 }
 .mat-expansion-panel-header {
-	.mat-expansion-indicator {
-		&::after {
-			border-style: solid;
-			border-width: 0 2px 2px 0;
-			content: '';
-			display: inline-block;
-			padding: 6px;
-			transform: rotate(45deg);
-			vertical-align: middle;
-			color: #000;
-		}
-	}
+  .mat-expansion-indicator {
+    &::after {
+      border-style: solid;
+      border-width: 0 2px 2px 0;
+      content: "";
+      display: inline-block;
+      padding: 6px;
+      transform: rotate(45deg);
+      vertical-align: middle;
+      color: #000;
+    }
+  }
 }
 .mat-expansion-panel-header-description {
-	color: #000;
+  color: #000;
 }
 .details-tiles {
-	margin-bottom: 35px;
+  margin-bottom: 35px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-	span.year-filter-info {
-		right: 15px;
-	}
+  span.year-filter-info {
+    right: 15px;
+  }
 }
 @media (max-width: 768px) {
-	.mat-card:not([class*=mat-elevation-z]) {
-        padding: 24px 16px;
-	}
-	.filter-left-col {
-		display: block;
-		width: 100%;
-		margin-bottom: 15px;
-	}
-	.filter-right-col {
-		display: block;
-		width: 100%;
-		text-align: left;
-	}
-	.mat-form-field {
-		width: 89%;
-		margin-right: 5px;
-	}
-	span.year-filter-info {
-		position: static;
-	}
-	p.net-fee {
-		margin-bottom: 20px;
-	}
-	.benchmarks-container {
-		h4 {
-			font-size: 14px !important;
-		}
-	}
-	mat-panel-title.mat-expansion-panel-header-title {
-		font-size: 16px;
-	}
-	mat-expansion-panel.mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing {
-		margin-top: 27px;
-	}
+  .mat-card:not([class*="mat-elevation-z"]) {
+    padding: 24px 16px;
+  }
+  .filter-left-col {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .filter-right-col {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  .mat-form-field {
+    width: 89%;
+    margin-right: 5px;
+  }
+  span.year-filter-info {
+    position: static;
+  }
+  p.net-fee {
+    margin-bottom: 20px;
+  }
+  .benchmarks-container {
+    h4 {
+      font-size: 14px !important;
+    }
+  }
+  mat-panel-title.mat-expansion-panel-header-title {
+    font-size: 16px;
+  }
+  mat-expansion-panel.mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing {
+    margin-top: 27px;
+  }
 }
