@@ -4,22 +4,29 @@
 .mat-tab-group.mat-primary {
 	.mat-ink-bar {
 		background-color: #2275d3;
-		height: 4px;
+		height: 5px;
 	}
 }
 .mat-tab-nav-bar.mat-primary {
 	.mat-ink-bar {
 		background-color: #2275d3;
-		height: 4px;
+		height: 5px;
 	}
 }
 .mat-tab-label {
 	font-family: 'PT Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 500;
-	color: #6f6f6f;
+	color: #6f6f6f !important;
 	text-transform: uppercase;
 	opacity: 1 !important;
+	min-width: 184px !important;
+}
+.mat-tab-label-content {
+    font-size: 18px;
+    color: #000;
+	line-height: 22px;
+	font-family: 'PT Sans', sans-serif;
 }
 .mat-tab-label-active {
 	font-weight: 700;
@@ -27,17 +34,21 @@
 }
 .mat-inner-group {
 	.mat-tab-label {
-		font-weight: 500;
-		color: #000;
-		line-height: 17px;
-		font-size: 16px;
-		font-family: 'PT Sans', sans-serif;
+		height: 59px;		
+		.mat-tab-label-content {
+			font-weight: 500;
+			color: #000;
+			line-height: 17px;
+			font-size: 16px;
+			font-family: 'PT Sans', sans-serif;
+		}
 	}
 	.mat-tab-label-active {
 		background: #f8f9fa;
 	}
 	.mat-tab-labels {
 		background: #efefef;
+		    height: 59px;
 	}
 	.mat-ink-bar {
 		display: none;
@@ -58,8 +69,8 @@
 		mat-card.mat-card {
 			display: block;
 			text-align: center;
-			box-shadow: 0 1px 8px 0px rgba(0, 0, 0, 0.18);
-			border-radius: 1.43px;
+			box-shadow: 0 3px 8px 0px rgba(0, 0, 0, 0.18);
+			border-radius: 1.23px;
 			background: #fff;
 			h4 {
 				font-size: 16.07px;
