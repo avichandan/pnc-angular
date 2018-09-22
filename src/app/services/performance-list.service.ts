@@ -6,18 +6,13 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 
-export class PerformanceListService implements OnInit {
+export class PerformanceListService {
 
     items: PerformanceItem[];
-    // itemsList = new BehaviorSubject<PerformanceItem[]>([])
 
 
     constructor() {
         this.items = performanceItems;
-    }
-
-    ngOnInit() {
-        // this.itemsList.next(performanceItems)
     }
 
     getPerformanceItems() {

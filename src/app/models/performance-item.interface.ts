@@ -4,6 +4,7 @@ export interface PerformanceItem {
     target:boolean,
     fixedIncome: number;
     cash: number;
+    data: Array<any>
 }
 
 

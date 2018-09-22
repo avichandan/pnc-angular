@@ -7,6 +7,30 @@
 		box-shadow: none !important;
 	}
 }
+
+.c3-xgrid-line line {
+    stroke: blue !important;
+}
+.c3-xgrid-line.grid4 line {
+    stroke: pink !important;
+}
+.c3-xgrid-line.grid4 text {
+    fill: pink !important;
+}
+.c3-ygrid-line line {
+    stroke: red !important;
+}
+.c3-ygrid-line.grid800 line {
+    stroke: green !important;
+}
+.c3-ygrid-line.grid800 text {
+    fill: green !important;
+}
+
+.c3-line {
+	stroke-width: 3px !important;
+}
+
 .mat-card:not([class*=mat-elevation-z]) {
     box-shadow: none;
     padding: 24px 38px 35px 38px;
@@ -232,4 +256,7 @@ mat-expansion-panel.mat-expansion-panel {
 	mat-expansion-panel.mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing {
 		margin-top: 27px;
 	}
+	
 }
+
+

@@ -1,11 +1,15 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { PerformanceComponent} from './performance/performance.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
     {
         path:'', component: PerformanceComponent, pathMatch: 'full'
+    },
+    {
+        path:  'test', component: TestComponent
     }
 ];
 

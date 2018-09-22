@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, ViewEncapsulation } from '@angular/core';
 import * as moment from 'moment';
 import * as c3 from 'c3';
+import lodash from 'lodash';
 import { PerformanceItem } from '../../models/performance-item.interface';
 import { targetPerformanceItem } from '../../models/performance-item.model';
 import { Branch } from '../../models/branch-performance.interface';
@@ -31,9 +32,12 @@ export class PerformanceGraphComponent implements OnInit {
   endYear: number;
   xaxisLables: Array<any> = [];
   itemSelectedDisVariable: boolean = false;
+  columns: Array<any>;
 
 
-  constructor(private branchPerformanceService: BranchPerformanceListService) { }
+  constructor(private branchPerformanceService: BranchPerformanceListService) {
+
+  }
 
   ngOnInit() {
 
@@ -41,23 +45,25 @@ export class PerformanceGraphComponent implements OnInit {
     this.branches = this.branchPerformanceService.getBranchesList();
     this.endYear = parseInt(moment().format('YYYY'));
     this.startYear = this.endYear - 1;
-
+    this.columns = [
+      ['x', '2013-02-1', '2013-03-1', '2013-04-1', '2013-05-1', '2013-06-1',
+        '2013-07-1', '2013-08-1', '2013-09-1', '2013-10-1', '2013-11-1', '2013-12-1', '2014-01-1']
+    ]
+    this.columns.push(targetPerformanceItem.data);
   }
 
- 
+
 
   ngAfterViewInit() {
 
+    this.drawChart();
+  }
+
+  drawChart() {
     let chart = c3.generate({
       data: {
         x: 'x',
-        columns: [
-          ['x', '2013-02-1', '2013-03-1', '2013-04-1', '2013-05-1','2013-06-1',
-           '2013-07-1','2013-08-1', '2013-09-1', '2013-10-1', '2013-11-1', '2013-12-1', '2014-01-1'],
-          ['data1', 30, 21, 10, 40, 15, 25, 41, 55, 14, 67, 85, 33],
-          ['data2', 13, 10, 14, 20, 15, 5, 47, 25, 62, 27, 57, 78],
-          ['data3', 13, 12, 17, 22, 19, 35, 23, 89, 94, 45, 15, 29]
-        ],
+        columns: this.columns,
         axes: {
           data1: 'y2',
           data2: 'y2',
@@ -70,25 +76,31 @@ export class PerformanceGraphComponent implements OnInit {
           data3: 'green'
         },
       },
+
       axis: {
         x: {
           type: 'timeseries',
+          padding: {
+            left: 0,
+            right: 0,
+          },
           tick: {
-            values: ['2013-02-1', '2013-03-1', '2013-04-1', '2013-05-1','2013-06-1',
-            '2013-07-1','2013-08-1', '2013-09-1', '2013-10-1', '2013-11-1', '2013-12-1', '2014-01-1'],
-            format: function(value){
+            values: ['2013-02-1', '2013-03-1', '2013-04-1', '2013-05-1', '2013-06-1',
+              '2013-07-1', '2013-08-1', '2013-09-1', '2013-10-1', '2013-11-1', '2013-12-1', '2014-01-1'],
+            format: function (value) {
               const monthEnd = moment(value).endOf('month')['_d'];
               const updatedEndOfMonth = moment(monthEnd).format('DD');
               return moment(value).format('M' + '/' + updatedEndOfMonth)
-            }
-            
+            },
+            outer: false
+
           }
         },
         y: {
           show: false
         },
         y2: {
-          show: true,
+          show: false,
           min: 10,
           max: 100,
           label: {
@@ -98,11 +110,82 @@ export class PerformanceGraphComponent implements OnInit {
           tick: {
             format: function (value) {
               return value + '%';
-            },
-            outer: false
+            }
           }
         }
-      }
+      },
+      grid: {
+        y: {
+          lines: [
+            {
+              value: 0,
+              text: '0%',
+              axis: 'y2',
+              class: 'grid800'
+            },
+            {
+              value: 10,
+              text: '10%',
+              axis: 'y2',
+              class: 'grid800'
+            },
+            {
+              value: 20,
+              text: '20%',
+              axis: 'y2',
+              class: 'grid800'
+            },
+            {
+              value: 30,
+              text: '30%',
+              axis: 'y2',
+              class: 'grid800'
+            },
+            {
+              value: 40,
+              text: '40%',
+              axis: 'y2',
+              class: 'grid800'
+            },
+            {
+              value: 50,
+              text: '50%',
+              axis: 'y2',
+              class: 'grid800'
+            },
+            {
+              value: 60,
+              text: '60%',
+              axis: 'y2',
+              class: 'grid800'
+            },
+            {
+              value: 70,
+              text: '70%',
+              axis: 'y2',
+              class: 'grid800'
+            },
+            {
+              value: 80,
+              text: '80%',
+              axis: 'y2',
+              class: 'grid800'
+            },
+            {
+              value: 90,
+              text: '90%',
+              axis: 'y2',
+              class: 'grid800'
+            },
+            {
+              value: 100,
+              text: '100%',
+              axis: 'y2',
+              class: 'grid800'
+            },
+          ]
+        }
+      },
     });
 
   }
@@ -115,11 +198,22 @@ export class PerformanceGraphComponent implements OnInit {
 
   checkedItem(checked) {
     if (checked) {
-
-      this.items.push(this.item)
+      this.items.push(this.item);
+      this.columns.push(this.item.data);
+      this.drawChart();
     }
     else {
-      this.items.splice(this.item, 1)
+      this.items.splice(this.item, 1);
+      let index;
+      this.columns.forEach(item => {
+        item.forEach(insideItem => {
+          if (insideItem == this.item.data[0]) {
+            index = this.columns.indexOf(item)
+          }
+        })
+      })
+      this.columns.splice(index, 1)
+      this.drawChart();
     }
   }
   selectionChanged(value) {
@@ -128,8 +222,7 @@ export class PerformanceGraphComponent implements OnInit {
   }
 
 
-  itemSelectedDis(event){
-    console.log("eventsss", event);
+  itemSelectedDis(event) {
     this.itemSelectedDisVariable = event;
   }
 }
