@@ -112,25 +112,51 @@ a.menu-trgger {
   }
 }
 @media (max-width: 767px) {
-  .header-left {
-    width: 85%;
-  }
-  .header-right {
-    width: 12%;
-  }
-  a.logo {
-    margin-right: 0;
-    border-right: none;
-    padding-right: 0;
-  }
-  a.wealth-insight {
-    display: block;
-    padding-left: 69px;
-    padding-top: 10px;
+  .header-wrapper {
+    padding: 10px 15px;
+    .header-left {
+      width: 90%;
+      .mobile-trigger {
+        width: 30px;
+        margin-right: 10px;
+        margin-top: 8px;
+        span{
+          &::before{
+            width: 18px;
+            top: 10px;
+          }
+          &::after {
+            top: 20px;
+          }
+        }
+      }
+      a.logo {
+        margin-right: 7px;
+        padding-right: 5px;
+        width: 80px;
+        margin-top: 7px;
+      }
+      a.wealth-insight {
+        padding-left: 0;
+        padding-top: 10px;
+        font-size: 16px;
+      }
+    }
+    .header-right {
+      width: 9%;
+    }  
+    .header-bottom-wrapper {
+      padding: 0 20px;
+      margin-bottom: 30px;
+      min-height: 100px;
+    }
   }
   .header-bottom-wrapper {
-    padding: 0 20px;
-    margin-bottom: 30px;
-    min-height: 100px;
+    min-height: 60px;
+    padding: 0;
+    margin-bottom: 0;
+    .menu-trgger {
+      display: none;
+    }
   }
 }

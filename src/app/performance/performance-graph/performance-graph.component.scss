@@ -32,15 +32,14 @@
 }
 
 .mat-card:not([class*=mat-elevation-z]) {
-    box-shadow: none;
     padding: 24px 38px 35px 38px;
-  box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.18);
-  max-width: 1200px;
-  margin: 30px auto 35px;
-  position: relative;
-  mat-card.mat-card {
-    box-shadow: none !important;
-  }
+    box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.18);
+    max-width: 1200px;
+    margin: 30px auto 35px;
+    position: relative;
+    mat-card.mat-card {
+      box-shadow: none !important;
+    }
 }
 .mat-card:not([class*="mat-elevation-z"]) {
   box-shadow: none;
@@ -83,6 +82,14 @@
   width: 49%;
   vertical-align: top;
   text-align: right;
+}
+.filter-wrapper.last { 
+  .filter-left-col {
+    width: 71%;
+  }
+  .filter-right-col {
+    width: 27%;
+  }
 }
 .mat-icon.info-icon {
   position: relative;
@@ -132,21 +139,17 @@ span.year-filter-info {
   display: inline-block;
   min-width: 140px;
   margin-right: 36px !important;
-  &::after {
-    content: "";
-    content: "";
-    height: 7px;
-    width: 140px;
-    position: absolute;
-    display: block;
-    left: 0;
-    background: #2275d3;
-    bottom: -18px;
-    z-index: 9;
-  }
+  min-height: 45px;
   &:last-child {
     margin-right: 0 !important;
   }
+  span.data-color {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    top: 24px;
+  } 
 }
 .name {
   color: #333333;
@@ -240,19 +243,12 @@ mat-expansion-panel.mat-expansion-panel {
     right: 15px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .main-cart-wrapper {
+    max-width: 93%;
+  }
 	.mat-card:not([class*=mat-elevation-z]) {
-        padding: 24px 16px;
-	}
-	.filter-left-col {
-		display: block;
-		width: 100%;
-		margin-bottom: 15px;
-	}
-	.filter-right-col {
-		display: block;
-		width: 100%;
-		text-align: left;
+    padding: 24px 16px;
 	}
 	.mat-form-field {
 		width: 89%;
@@ -274,20 +270,9 @@ mat-expansion-panel.mat-expansion-panel {
 	}
 	mat-expansion-panel.mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing {
 		margin-top: 27px;
-	}
-	
+	}	
   .mat-card:not([class*="mat-elevation-z"]) {
     padding: 24px 16px;
-  }
-  .filter-left-col {
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  .filter-right-col {
-    display: block;
-    width: 100%;
-    text-align: left;
   }
   .mat-form-field {
     width: 89%;
@@ -309,6 +294,29 @@ mat-expansion-panel.mat-expansion-panel {
   }
   mat-expansion-panel.mat-expansion-panel.mat-expanded.mat-expansion-panel-spacing {
     margin-top: 27px;
+  }
+  .filter-left-col{
+    width: 42%;
+    h4 {
+      font-size: 14px;
+      margin: 0;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .filter-right-col{
+    width: 56%;
+  }
+  .year-select {
+    .mat-form-field-infix {
+      height: 35px;
+      line-height: 22px;
+      padding-left: 15px;
+      padding-right: 15px;
+      flex: none;
+      width: 110px;
+    }
   }
 }
 

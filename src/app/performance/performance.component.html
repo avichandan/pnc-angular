@@ -1,11 +1,17 @@
 <mat-tab-group class="mat-label-head">
-  <mat-tab label="% Return">
+  <mat-tab>
+      <ng-template mat-tab-label>
+          % Return
+        </ng-template>
     <mat-tab-group class="mat-inner-group">
       <mat-tab label="CUMALATIVE">
         <app-performance-graph></app-performance-graph>
       </mat-tab>
-      <mat-tab label="ANNUALIZED">
-        <mat-icon class="info-icon-gray" matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
+      <mat-tab>
+          <ng-template mat-tab-label>
+            ANNUALIZED
+              <mat-icon matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}" class="gray-icon-new">info</mat-icon> 
+          </ng-template>
       </mat-tab>
     </mat-tab-group>
   </mat-tab>
