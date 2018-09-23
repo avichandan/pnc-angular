@@ -4,16 +4,16 @@
       <mat-tab label="CUMALATIVE">
         <app-performance-graph></app-performance-graph>
       </mat-tab>
-      <mat-tab label="ANNUALIZED"></mat-tab>
+      <mat-tab label="ANNUALIZED">
+        <mat-icon class="info-icon-gray" matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
+      </mat-tab>
     </mat-tab-group>
   </mat-tab>
   <mat-tab class="mat-label-head" label="$ Market Value">
     <mat-tab-group class="mat-inner-group">
       <mat-tab label="Market Value 1">
       </mat-tab>
-      <mat-tab label="Market Value 2">
-
-      </mat-tab>
+      <mat-tab label="Market Value 2"></mat-tab>
     </mat-tab-group>
   </mat-tab>
 </mat-tab-group>
