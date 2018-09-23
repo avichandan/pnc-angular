@@ -33,6 +33,8 @@ export class PerformanceGraphComponent implements OnInit {
   xaxisLables: Array<any> = [];
   itemSelectedDisVariable: boolean = false;
   columns: Array<any>;
+  showAverage: Array<any> = [];
+  colors: any = {};
 
 
   constructor(private branchPerformanceService: BranchPerformanceListService) {
@@ -50,6 +52,12 @@ export class PerformanceGraphComponent implements OnInit {
         '2013-07-1', '2013-08-1', '2013-09-1', '2013-10-1', '2013-11-1', '2013-12-1', '2014-01-1']
     ]
     this.columns.push(targetPerformanceItem.data);
+   
+    const key = targetPerformanceItem.data[0].toString();
+    const value = targetPerformanceItem.color;
+    const netPercent = targetPerformanceItem.netPercent
+    this.showAverage.push([netPercent, value]);
+    Object.assign(this.colors, { key: value})
   }
 
 
@@ -70,11 +78,7 @@ export class PerformanceGraphComponent implements OnInit {
           data3: 'y2'
         },
         type: 'spline',
-        colors: {
-          data1: 'red',
-          data2: 'yellow',
-          data3: 'green'
-        },
+        colors: this.colors,
       },
 
       axis: {
@@ -200,6 +204,14 @@ export class PerformanceGraphComponent implements OnInit {
     if (checked) {
       this.items.push(this.item);
       this.columns.push(this.item.data);
+      const key = this.item.data[0].toString();
+      const value = this.item.color;
+      var obj = {};
+      obj[key] = value;
+      Object.assign(this.colors, obj);
+      const netPercent = this.item.netPercent
+      this.showAverage.push([netPercent, value]);
+      console.log("sddddddd", this.showAverage)
       this.drawChart();
     }
     else {
@@ -213,6 +225,16 @@ export class PerformanceGraphComponent implements OnInit {
         })
       })
       this.columns.splice(index, 1)
+      const key = this.item.data[0].toString();
+      let avgIndex;
+      this.showAverage.forEach(item => {
+        if(item[key] == this.item.netPercent){
+          console.log("yes")
+          avgIndex = this.showAverage.indexOf(item);
+        }
+      })
+      this.showAverage.splice(avgIndex, 1)
+      delete this.colors[key];
       this.drawChart();
     }
   }

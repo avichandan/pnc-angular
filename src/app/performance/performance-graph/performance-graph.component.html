@@ -28,8 +28,8 @@
         </div>
       </div>
       <div class="filter-wrapper last">
-        <div class="filter-left-col">
-          <p class="net-fee">39.1%</p>
+        <div class="filter-left-col" *ngFor = "let percent of showAverage">
+          <p class="net-fee" [ngStyle] = "{'backgroundColor': percent[1]}">{{ percent[0] }}%</p>
         </div>
         <div class="filter-right-col">
           <span class="aggregate-info">

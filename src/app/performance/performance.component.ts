@@ -8,11 +8,16 @@
 })
 
 export class PerformanceComponent implements OnInit {
-
-    
+    displayIcon:boolean = false;
     constructor() { }
 
     ngOnInit() {
-        
      }
+
+     showIcon2() {
+         this.displayIcon = true;
+     }
+     showIcon1() {
+        this.displayIcon = false;
+    }
 }

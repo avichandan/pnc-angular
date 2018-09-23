@@ -1,10 +1,18 @@
 <mat-tab-group class="mat-label-head">
-  <mat-tab label="% Return">
+  <mat-tab>
+      <ng-template mat-tab-label>
+          % Return
+        </ng-template>
     <mat-tab-group class="mat-inner-group">
       <mat-tab label="CUMALATIVE">
         <app-performance-graph></app-performance-graph>
       </mat-tab>
-      <mat-tab label="ANNUALIZED"></mat-tab>
+      <mat-tab>
+          <ng-template mat-tab-label>
+            ANNUALIZED
+              <mat-icon>info</mat-icon> 
+          </ng-template>
+      </mat-tab>
     </mat-tab-group>
   </mat-tab>
   <mat-tab class="mat-label-head" label="$ Market Value">
