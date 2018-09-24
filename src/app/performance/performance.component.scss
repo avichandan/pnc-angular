@@ -27,10 +27,14 @@
     color: #000;
 	line-height: 22px;
 	font-family: 'PT Sans', sans-serif;
-	.gray-icon-new {
-		background: url(../../assets/images/rounded-info-gray.png) no-repeat center center;
-		color: transparent;
-	}
+}
+.gray-icon-new {
+    background: url(../../assets/images/rounded-info-gray.png) no-repeat center center;
+	color: transparent;
+	position: absolute;
+	right: 20px;
+	top: 18px;
+	z-index: 9;
 }
 .mat-tab-label-active {
 	font-weight: 700;
