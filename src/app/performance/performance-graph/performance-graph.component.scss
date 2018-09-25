@@ -85,10 +85,10 @@
 }
 .filter-wrapper.last { 
   .filter-left-col {
-    width: 71%;
+    width: 100%;
   }
   .filter-right-col {
-    width: 27%;
+    width: 100%;
   }
 }
 .mat-icon.info-icon {
@@ -238,6 +238,13 @@ mat-expansion-panel.mat-expansion-panel {
 .details-tiles {
   margin-bottom: 35px;
 }
+.for-desktop {
+  display: block;
+}
+.for-mobile {
+  display: none;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   span.year-filter-info {
     right: 15px;
@@ -249,16 +256,11 @@ mat-expansion-panel.mat-expansion-panel {
   }
 	.mat-card:not([class*=mat-elevation-z]) {
     padding: 24px 16px;
+    margin: 10px auto 20px;
 	}
 	.mat-form-field {
 		width: 89%;
-		margin-right: 5px;
-	}
-	span.year-filter-info {
-		position: static;
-	}
-	p.net-fee {
-		margin-bottom: 20px;
+		margin-right: 0;
 	}
 	.benchmarks-container {
 		h4 {
@@ -274,15 +276,21 @@ mat-expansion-panel.mat-expansion-panel {
   .mat-card:not([class*="mat-elevation-z"]) {
     padding: 24px 16px;
   }
-  .mat-form-field {
-    width: 89%;
-    margin-right: 5px;
-  }
   span.year-filter-info {
-    position: static;
+    right: 10px;
+    top: 28px;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: transparent;
   }
   p.net-fee {
     margin-bottom: 20px;
+    min-width: 55px;
+    font-size: 17px !important;
+    margin-right: 15px !important;
+    span.data-color {
+      height: 4px;
+    }
   }
   .benchmarks-container {
     h4 {
@@ -317,6 +325,18 @@ mat-expansion-panel.mat-expansion-panel {
       flex: none;
       width: 110px;
     }
+  }
+  .year-filter-value {
+    font-size: 12px;
+  }
+  .for-desktop {
+    display: none;
+  }
+  .for-mobile {
+    display: block;
+  }
+  .filter-wrapper.last.for-mobile .filter-left-col {
+    margin-top: 30px;
   }
 }
 

@@ -27,9 +27,10 @@
           </div>
         </div>
       </div>
-      <div class="filter-wrapper last">
+      <div class="filter-wrapper last for-desktop">
         <div class="filter-left-col">
-          <p *ngFor = "let percent of showAverage" class="net-fee">{{ percent[0] }}% <span [ngStyle] = "{'backgroundColor': percent[1]}" class="data-color"></span></p>
+          <p *ngFor="let percent of showAverage" class="net-fee">{{ percent[0] }}% <span [ngStyle]="{'backgroundColor': percent[1]}"
+              class="data-color"></span></p>
         </div>
         <div class="filter-right-col">
           <span class="aggregate-info">
@@ -39,6 +40,22 @@
           <span class="filter-toggle-btn">
             <mat-slide-toggle></mat-slide-toggle>
           </span>
+        </div>
+      </div>
+
+      <div class="filter-wrapper last for-mobile">
+        <div class="filter-right-col">
+          <span class="aggregate-info">
+            <mat-icon class="info-icon" matTooltip="Info about the action" [ngStyle]="{'cursor': 'pointer'}">info</mat-icon>
+          </span>
+          <span class="name">Aggregate</span>
+          <span class="filter-toggle-btn">
+            <mat-slide-toggle></mat-slide-toggle>
+          </span>
+        </div>
+        <div class="filter-left-col">
+          <p *ngFor="let percent of showAverage" class="net-fee">{{ percent[0] }}% <span [ngStyle]="{'backgroundColor': percent[1]}"
+              class="data-color"></span></p>
         </div>
       </div>
 
