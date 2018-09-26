@@ -258,9 +258,10 @@ mat-expansion-panel.mat-expansion-panel {
     padding: 24px 16px;
     margin: 10px auto 20px;
 	}
-	.mat-form-field {
+	.year-filter-info .mat-form-field {
 		width: 89%;
-		margin-right: 0;
+    margin-right: 0;
+    text-align: right;
 	}
 	.benchmarks-container {
 		h4 {
