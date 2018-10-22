@@ -52,12 +52,16 @@ export class PerformanceGraphComponent implements OnInit {
         '2013-07-1', '2013-08-1', '2013-09-1', '2013-10-1', '2013-11-1', '2013-12-1', '2014-01-1']
     ]
     this.columns.push(targetPerformanceItem.data);
-   
+   console.log(this.columns)
     const key = targetPerformanceItem.data[0].toString();
     const value = targetPerformanceItem.color;
     const netPercent = targetPerformanceItem.netPercent
     this.showAverage.push([netPercent, value]);
     Object.assign(this.colors, { key: value})
+  }
+
+  addDataPoint(){
+    this.columns
   }
 
 
@@ -77,10 +81,13 @@ export class PerformanceGraphComponent implements OnInit {
           data2: 'y2',
           data3: 'y2'
         },
+        
         type: 'spline',
         colors: this.colors,
       },
-
+      point: {
+        r: 5
+      },
       axis: {
         x: {
           type: 'timeseries',
@@ -204,6 +211,7 @@ export class PerformanceGraphComponent implements OnInit {
     if (checked) {
       this.items.push(this.item);
       this.columns.push(this.item.data);
+      console.log(this.columns)
       const key = this.item.data[0].toString();
       const value = this.item.color;
       var obj = {};
@@ -211,7 +219,7 @@ export class PerformanceGraphComponent implements OnInit {
       Object.assign(this.colors, obj);
       const netPercent = this.item.netPercent
       this.showAverage.push([netPercent, value]);
-      console.log("sddddddd", this.showAverage)
+      
       this.drawChart();
     }
     else {
@@ -229,7 +237,7 @@ export class PerformanceGraphComponent implements OnInit {
       let avgIndex;
       this.showAverage.forEach(item => {
         if(item[key] == this.item.netPercent){
-          console.log("yes")
+        
           avgIndex = this.showAverage.indexOf(item);
         }
       })
