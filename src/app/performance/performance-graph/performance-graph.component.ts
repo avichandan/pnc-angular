@@ -61,7 +61,7 @@ export class PerformanceGraphComponent implements OnInit {
   }
 
   addDataPoint(){
-    this.columns
+   this.columns[this.columns.length - 1]
   }
 
 
@@ -199,7 +199,10 @@ export class PerformanceGraphComponent implements OnInit {
       },
     });
 
+    
+
   }
+
 
 
 
@@ -211,7 +214,7 @@ export class PerformanceGraphComponent implements OnInit {
     if (checked) {
       this.items.push(this.item);
       this.columns.push(this.item.data);
-      console.log(this.columns)
+       console.log(this.columns);
       const key = this.item.data[0].toString();
       const value = this.item.color;
       var obj = {};
