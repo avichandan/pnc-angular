@@ -82,7 +82,7 @@ export class PerformanceGraphComponent implements OnInit {
           data3: 'y2'
         },
         
-        type: 'spline',
+        type: 'area-spline',
         colors: this.colors,
       },
       point: {
